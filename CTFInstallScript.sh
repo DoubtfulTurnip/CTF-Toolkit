@@ -23,18 +23,24 @@ scanrec=~/apps/scanningandrecon
 
 # From Apt
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get update && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y
-sudo apt-get install rubygems build-essential -y
+sudo apt-get install rubygems build-essential docker.io -y
 
 
-# Docker install
-mkdir ~/dockerinstallscript
-cd ~/dockerinstallscript
-curl -fsSL https://get.docker.com -o get-docker.sh
+# Docker Stuff
 
-sudo sh get-docker.sh
+sudo systemctl enable docker --now
 
-sleep 5
-sudo rm -r ~/dockerinstallscript
+printf "%s\n" "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-ce-archive-keyring.gpg] https://download.docker.com/linux/debian buster stable" \
+  | sudo tee /etc/apt/sources.list.d/docker-ce.list
+  
+curl -fsSL https://download.docker.com/linux/debian/gpg \
+  | gpg --dearmor \
+  | sudo tee /usr/share/keyrings/docker-ce-archive-keyring.gpg
+
+sudo apt update
+
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+
 
 
 
@@ -50,8 +56,8 @@ export PATH=~/.local/bin:$PATH
 sudo npm install --global jwt-cracker
 
 # From Gem
-sudo gem install haiti-hash -y
-sudo gem install evil-winrm -y
+sudo gem install haiti-hash -q
+sudo gem install evil-winrm -q
 
 #Python Required Modules/Apps
 pip3 install selenium
