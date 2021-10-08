@@ -1,0 +1,86 @@
+#App Helper Alias
+alias apphelp='bash ~/apps/AppHelper.sh'
+
+# Crypto and Cracking Tool alias
+alias ctfbreakrsa='python3 ~/apps/cryptoandcracking/ctf_break_rsa/fac_n.py'
+alias duplicut='~/apps/cryptoandcracking/duplicut/duplicut'
+alias bopscrk='cd ~/apps/cryptoandcracking/bopscrk && python3 bopscrk.py'
+alias hatch='python3 ~/apps/cryptoandcracking/hatch/main.py'
+alias hate_crack='python ~/apps/cryptoandcracking/hate_crack/hate_crack.py'
+alias pnwgen='cd ~/apps/cryptoandcracking/pnwgen/ && python3 pnwgen.py'
+alias rsactftool='python3 ~/apps/cryptoandcracking/RsaCtfTool/RsaCtfTool.py'
+alias wordlistctl='python3 ~/apps/cryptoandcracking/wordlistctl/wordlistctl.py'
+alias zydra='python3 ~/apps/cryptoandcracking/Zydra/Zydra.py'
+alias nomorexor='python ~/apps/cryptoandcracking/NoMoreXOR/NoMoreXOR.py'
+alias rsatool='python3 ~/apps/cryptoandcracking/rsatool/rsatool.py'
+alias x0r='python ~/apps/cryptoandcracking/X0R/X0R.py'
+alias xor-decrypt='python3 ~/apps/cryptoandcracking/xor-decrypt/xor-decrypt.py'
+alias XOR-MultilineFiledir='~/apps/cryptoandcracking/XOR-MultilineFile'
+
+# Exploit alias
+alias avet='cd ~/apps/exploit/avet/ && python3 avet.py'
+alias chimera='bash ~/apps/exploit/Chimera/chimera.sh'
+alias wildpwn='python ~/apps/exploit/wildpwn/wildpwn.py'
+alias xeexee='python3 ~/apps/exploit/xeexee/Xeexe.py'
+alias dkmc='python ~/apps/exploit/DKMC/dkmc.py'
+alias fireelf='python3 ~/apps/exploit/fireELF/main.py'
+alias owt='bash ~/apps/exploit/owt/owt.sh'
+alias seth='python3 ~/apps/exploit/Seth/seth.py'
+alias xsstrike='python3 ~/apps/exploit/XSStrike/xsstrike.py'
+
+#Post-Exploit alias
+alias girsh='cd ~/apps/post-exploit/Girsh/src/ && go run main.go'
+alias enum4linux='python3 ~/apps/post-exploit/enum4linux-ng/enum4linux-ng.py'
+alias linux-exploit-suggester-2='perl ~/apps/post-exploit/linux-exploit-suggester-2/linux-exploit-suggester-2.pl'
+alias linenum='bash ~/apps/post-exploit/LinEnum/LinEnum.sh'
+alias linenumdir='cd ~/apps/post-exploit/LinEnum/'
+alias linPEASdir='cd ~/apps/post-exploit/PEASS/linPEAS'
+alias winPEASdir='cd ~/apps/post-exploit/PEASS/winPEAS'
+alias powerlessdir='cd ~/apps/post-exploit/Powerless'
+alias privesccheckdir='cd ~/apps/post-exploit/PrivescCheck'
+alias peh='bash ~/apps/post-exploit/peh/peh.sh'
+
+#Forensic alias
+alias autovolatility='python ~/apps/forensics/autoVolatility/autoVolatility.py'
+alias depix='python3 ~/apps/forensics/Depix/depix.py'
+alias peepdf='python ~/apps/forensics/peepdf/peepdf.py'
+alias ssh_decoder='ruby ~/apps/forensics/ssh_decoder/ssh_decoder.rb'
+alias stegsolve='java -jar ~/apps/forensics/stegsolve/stegsolve.jar'
+alias volatility='python3 ~apps/forensics/volatility3/vol.py'
+
+#Mobile alias
+
+
+#OSINT alias
+alias ghunt='python3 ~/apps/osint/GHunt/hunt.py'
+alias gitgraberdir='cd ~/apps/osint/gitGraber/'
+alias cardpwn='python3 ~/apps/osint/CardPwn/cardpwn.py'
+alias sif='python3 ~/apps/osint/SocialintFramework/main.py'
+alias shodansploit='python ~/apps/osint/shodansploit/shodansploit.py'
+alias scavenger='python3 ~/apps/osint/Scavenger/scavenger.py'
+alias spiderfoot='cd ~/apps/osint/spiderfoot/'
+
+# Reversing and Binary Exploit alias
+alias overflowhelper='python ~/apps/reversingandbinaryexploit/Overflow-Helper/BofHelper.py'
+alias ropstar='python3 ~/apps/reversingandbinaryexploit/ropstar/ropstar.py'
+alias jd-gui='java -jar ~/bin/jd-gui'
+
+# Scanning and recon
+alias autorecon='python3 ~/apps/scanningandrecon/Autorecon/src/autorecon/autorecon.py'
+alias s3scanner='python3 ~/apps/scanningandrecon/S3Scanner/s3scanner.py'
+alias shodansploit='sudo docker run --rm -it ismailtasdelen/shodansploit'
+alias sn1per='sudo docker run -it --rm xerosecurity/sn1per /bin/bash'
+
+export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
+
+# Clear ZSH History
+alias clear_history='echo "" > ~/.zsh_history & exec $SHELL -1'
+alias clear_history_bash='bash set -o history && bash  history -c'
+
+# Nessuscli 
+
+alias nessuscli='/opt/nessus/sbin/nessuscli'
+
+#Update app packages
+alias git-update-all='find ~/apps/ -maxdepth 4 -name .git -type d | rev | cut -c 6- | rev | xargs -I {}  git -C {} pull'
