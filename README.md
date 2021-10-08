@@ -1,4 +1,4 @@
-# ctftoolkit
+# CTFtoolkit
 
 There is nothing particularly special about this script. It just installs several tools that I have found useful for CTF challenges. It is in a very alpha release state at the moment but I am looking to make it a lot more streamline as I improve it and add more tools.
 
