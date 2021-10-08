@@ -23,7 +23,7 @@ scanrec=~/apps/scanningandrecon
 
 # From Apt
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get update && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y
-sudo apt-get install rubygems build-essential docker.io -y
+sudo apt-get install rubygems build-essential -y
 
 
 # Docker Stuff
@@ -60,24 +60,24 @@ sudo gem install haiti-hash -q
 sudo gem install evil-winrm -q
 
 #Python Required Modules/Apps
-pip3 install selenium
-pip3 install requests
-pip3 install py-term
-pip3 install pyasn1
-pip3 install gmpy2
-pip3 install pyv8
-pip3 install pylibemu
-pip3 install pwntools
-pip3 install bs4
-pip3 install search-that-hash
-pip3 install ttpassgen
-pip3 install pefile
-pip3 install apkleaks
-pip3 install h8mail
-pip3 install fuzza
-pip3 install libssl-dev
-pip3 install swig
-pip3 install s3scanner
+pip3 install selenium -U
+pip3 install requests -U
+pip3 install py-term -U
+pip3 install pyasn1 -U
+pip3 install gmpy2 -U
+#pip3 install pyv8
+pip3 install pylibemu -U
+pip3 install pwntools -U
+pip3 install bs4 -U
+pip3 install search-that-hash -U
+pip3 install ttpassgen -U
+pip3 install pefile -U
+pip3 install apkleaks -U
+pip3 install h8mail -U
+pip3 install fuzza -U
+pip3 install libssl-dev -U
+pip3 install swig -U
+pip3 install s3scanner -U
 
 # From Git
 
@@ -119,7 +119,7 @@ git clone https://github.com/hiddenillusion/NoMoreXOR.git $crypto/NoMoreXOR/
 git clone https://github.com/ius/rsatool.git $crypto/rsatool/
 
 git clone https://github.com/X-Vector/X0R.git $crypto/X0R/
-pip install -r $crypto/X0R/requirements.txt
+pip install -r $crypto/X0R/requirement.txt
 
 git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/
 
@@ -158,7 +158,7 @@ cd $exploit/DKMC
 mkdir output
 
 git clone https://github.com/rek7/fireELF.git $exploit/fireELF/
-pip3 -U -r $exploit/firreELF/dep.txt
+pip3 install -r $exploit/firreELF/dep.txt
 
 git clone https://github.com/clu3bot/OWT.git $exploit/OWT/
 
@@ -166,7 +166,7 @@ git clone https://github.com/SySS-Research/Seth.git $exploit/Seth/
 
 git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStirke/
 cd $exploit/XSStrike
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
 
 
 
@@ -179,7 +179,7 @@ git clone https://github.com/nodauf/Girsh.git $postexploit/Girsh/
 
 git clone https://github.com/cddmp/enum4linux-ng $postexploit/enum4linux-ng/
 cd $postexploit/enum4linux-ng/
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
 
 git clone https://github.com/jondonas/linux-exploit-suggester-2.git $postexploit/linux-exploit-suggester-2/
 
@@ -191,7 +191,7 @@ git clone https://github.com/gladiatx0r/Powerless.git $postexploit/Powerless/
 
 git clone https://github.com/itm4n/PrivescCheck.git $postexploit/PrivescCheck/
 
-git clone git clone https://github.com/melnicek/peh.git $postexploit/peh/
+git clone https://github.com/melnicek/peh.git $postexploit/peh/
 
 
 
@@ -256,14 +256,14 @@ pip3 install -r requirements.txt
 
 git clone https://github.com/Pyshios/SocialintFramework.git $osint/SocialintFramework
 cd $osint/SocialintFramework/
-pip3 install -r requirements.txt
+pip3 install -r requeriments.txt
 
 git clone https://github.com/rndinfosecguy/Scavenger.git $osint/Scavenger/
 mkdir $osint/spiderfoot
 wget https://github.com/smicallef/spiderfoot/archive/v3.4.tar.gz $osin/spiderfoot
 $osint/spiderfoot/tar zxvf v3.4.tar.gz
 cd $osint/spiderfoot/
-pip3 install -r requirements.txt
+pip3 install -r requeriments.txt
 
 mkdir $osint/gitjacker/
 cd $osint/gitjacker/
@@ -309,6 +309,11 @@ pip3 install -r requirements.txt
 
 # Helpers
 
-cp ./helpers/* ~/apps
+cp helpers/* ~/apps
 
-grep -qxF '[ -r ~/apps/customzshrc ] && source ~/apps/.customzshrc' ~/.zshrc || echo '[ -r ~/apps/customzshrc ] && source ~/app/.customzshrc' >> ~/.zshrc
+
+for zshrc_file in ~/.zshrc; do
+    if ! grep -qF 'source ~/apps/customzshrc' $zshrc_file; then
+        echo "source ~/apps/customzshrc" >> $bashrc_file
+    fi
+done
