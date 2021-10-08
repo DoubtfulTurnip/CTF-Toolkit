@@ -23,7 +23,7 @@ scanrec=~/apps/scanningandrecon
 
 # From Apt
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get update && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y
-sudo apt-get install rubygems build-essential -y
+sudo apt-get install rubygems build-essential docker.io -y
 
 
 # Docker Stuff
