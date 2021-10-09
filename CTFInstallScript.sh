@@ -77,24 +77,24 @@ sudo gem install haiti-hash -q 1>/dev/null 2>> ./install.log
 sudo gem install evil-winrm -q 1>/dev/null 2>> ./install.log
 
 #Python Required Modules/Apps
-pip3 install selenium -U -q --log installerror.log
-pip3 install requests -U -q --log installerror.log
-pip3 install py-term -U -q --log installerror.log
-pip3 install pyasn1 -U -q --log installerror.log
-pip3 install gmpy2 -U -q --log installerror.log
-#pip3 install pyv8
-pip3 install pylibemu -U -q --log installerror.log
-pip3 install pwntools -U -q --log installerror.log
-pip3 install bs4 -U -q --log installerror.log
-pip3 install search-that-hash -U -q --log installerror.log
-pip3 install ttpassgen -U -q --log installerror.log
-pip3 install pefile -U -q --log installerror.log
-pip3 install apkleaks -U -q --log installerror.log
-pip3 install h8mail -U -q --log installerror.log
-pip3 install fuzza -U -q --log installerror.log
-pip3 install libssl-dev -U -q --log installerror.log
-pip3 install swig -U -q --log installerror.log
-pip3 install s3scanner -U -q --log installerror.log
+pip3 install selenium -U -q --log pipinstall.log
+pip3 install requests -U -q --log pipinstall.log
+pip3 install py-term -U -q --log pipinstall.log
+pip3 install pyasn1 -U -q --log pipinstall.log
+pip3 install gmpy2 -U -q --log pipinstall.log
+pip3 install rarfile -U -q --log pipinstall.log
+pip3 install pylibemu -U -q --log pipinstall.log
+pip3 install pwntools -U -q --log pipinstall.log
+pip3 install bs4 -U -q --log pipinstall.log
+pip3 install search-that-hash -U -q --log pipinstall.log
+pip3 install ttpassgen -U -q --log pipinstall.log
+pip3 install pefile -U -q --log pipinstall.log
+pip3 install apkleaks -U -q --log pipinstall.log
+pip3 install h8mail -U -q --log pipinstall.log
+pip3 install fuzza -U -q --log pipinstall.log
+pip3 install libssl-dev -U -q --log pipinstall.log
+pip3 install swig -U -q --log pipinstall.log
+pip3 install s3scanner -U -q --log pipinstall.log
 
 # From Git
 
@@ -109,17 +109,12 @@ echo ""
 git clone https://github.com/r3nt0n/bopscrk.git $crypto/bopscrk/ 1>/dev/null 2>> ./install.log
 pip install -r $crypto/bopscrk/requirements.txt 1>/dev/null 2>> ./install.log
 
-#echo "Installing HashPump" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/bwall/HashPump.git $crypto/hashpump/ 1>/dev/null 2>> ./install.log
-#cd $crypto/HashPump 1>/dev/null 2>> ./install.log
-#sudo make 1>/dev/null 2>> ./install.log
-#sudo make install 1>/dev/null 2>> ./install.log
-
-#echo "Installing Hatch" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/zshell/Hatch.git $crypto/Hatch/ 1>/dev/null 2>> ./install.log
-#sudo wget https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_linux64.zip -O /usr/bin && sudo unzip /usr/bin/chromedriver_linux64.zip && sudo rm  /usr/bin/chromedriver_linux64.zip 1>/dev/null 2>> ./install.log
+echo "Installing HashPump" | tee -a ./install.log
+echo ""
+git clone https://github.com/bwall/HashPump.git $crypto/hashpump/ 1>/dev/null 2>> ./install.log
+cd $crypto/hashpump 1>/dev/null 2>> ./install.log
+sudo make 1>/dev/null 2>> ./install.log
+sudo make install 1>/dev/null 2>> ./install.log
 
 echo "Installing hate_crack" | tee -a ./install.log
 echo ""
@@ -134,20 +129,21 @@ echo ""
 git clone https://github.com/Ganapati/RsaCtfTool.git $crypto/RsaCtfTool/ 1>/dev/null 2>> ./install.log
 pip3 install -r $crypto/RsaCtfTool/requirements.txt 1>/dev/null 2>> ./install.log
 
-#echo "Installing Mentalist" | tee -a ./install.log
-#echo ""
-#wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip -O  ~/bin/ 1>/dev/null 2>> ./install.log
-#cd ~/bin/ 1>/dev/null 2>> ./install.log
-#unzip Mentalist-v1.0-Linux-x86_64.zip && rm Mentalist-v1.0-Linux-x86_64.zip 1>/dev/null 2>> ./install.log
+echo "Installing Mentalist" | tee -a ./install.log
+echo ""
+git clone https://github.com/sc0tfree/mentalist.git $crypto/mentalist/ 1>/dev/null 2>> ./install.log
+cd $crypto/mentalist/
+sudo python3 setup.py install
+
 
 echo "Installing wordlistctl" | tee -a ./install.log
 echo ""
 git clone https://github.com/BlackArch/wordlistctl $crypto/wordlistctl/ 1>/dev/null 2>> ./install.log
 
-#echo "Installing Zydra" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/hamedA2/Zydra.git $crypto/Zydra/ 1>/dev/null 2>> ./install.log
-#sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf 1>/dev/null 2>> ./install.log
+echo "Installing Zydra" | tee -a ./install.log
+echo ""
+git clone https://github.com/hamedA2/Zydra.git $crypto/Zydra/ 1>/dev/null 2>> ./install.log
+sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf 1>/dev/null 2>> ./install.log
 
 #echo "Installing NoMoreXOR" | tee -a ./install.log
 #echo ""
