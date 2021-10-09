@@ -73,36 +73,20 @@ select fav in "${apps[@]}"; do
             echo "For more details on these apps, take a look at the homepage in the browser"
             echo "
 ========
-Blue Team
-========
-- chkrootkit
-
-========
-========
-
-
- 
-========
 Crypto and Cracking
 ========
 - bopscrk
-- brutex
-- ctfbreakrsa
 - cewl
 - crunch
 - cupp
 - duplicut
-- frcrackzip
 - haiti
 - hashcat
 - hash-identifier
-- hashpump
-- hatch
 - hate_crack
 - hydra
 - jwt-cracker
 - john
-- mentalist
 - nomorexor
 - pnwgen
 - rsactftool
@@ -113,10 +97,6 @@ Crypto and Cracking
 - wordlistctl
 - x0r
 - xor-decrypt
-- XOR-MultilineFiledir (jump to directory - Read HowTo)
-- xortool
-- zydra
-
 =======
 =======
 
@@ -125,21 +105,15 @@ Crypto and Cracking
 =======
 Exploit
 =======
-- avet
-- chimera
 - dkmc
 - evil-winrm
 - fireelf
-- owt (Offensive Wifi Toolkit)
 - pwncat
 - routersploit
 - seth
 - sqlmap
-- veil (currently broken)
+- veil
 - wildpwn
-- xsstrike
-- xeexee
-
 =======
 =======
 
@@ -154,13 +128,10 @@ Post-Exploit - NOTE: Several of these are designed to be run on the target syste
 - linux-exploit-suggester-2
 - linenum
 - linenumdir (jump to directory)
-- linPEASdir (jump to directory)
-- winPEASdir (jump to directory)
 - powerlessdir (jump to directory)
 - powersploit (will output directory structure)
 - privesccheckdir (jump to directory)
 - peh
-
 =======
 =======
 
@@ -169,19 +140,14 @@ Post-Exploit - NOTE: Several of these are designed to be run on the target syste
 =======
 Forensics
 =======
-- audiostego
 - autovolatility
 - binwalk
-- brutesharkcli
 - depix
 - exiftool
 - foremost
 - peepdf
 - ssh_decoder
-- stegcracker
 - stegsolve
-- volatility
-
 =======
 =======
 
@@ -192,7 +158,6 @@ Mobile
 =======
 - apktool
 - apkleaks
-
 =======
 =======
 
@@ -201,16 +166,15 @@ Mobile
 =======
 OSINT
 =======
-- ghunt
 - gitgraberdir (jump to directory)
 - sherlock
 - cardpwn
 - h8mail
 - gitjacker
 - sif (Social Int Framework)
+- spiderfoot
 - shodansploit
 - scavenger
-
 =======
 =======
 
@@ -220,10 +184,10 @@ OSINT
 Reversing and Binary Exploit
 =======
 - fuzza
+- jd-gui
 - overflowhelper
 - peframe
 - ropstar
-
 =======
 =======
 
@@ -232,20 +196,12 @@ Reversing and Binary Exploit
 =======
 Scanning and Recon
 =======
-- autorecon (results placed in current directory)
 - shodansploit
-- s3scanner
 - sn1per
-
-
-
-=======
-misc
-=======
-- anonsurf
-
 =======
 =======
+
+
 
 "	
     	    break
