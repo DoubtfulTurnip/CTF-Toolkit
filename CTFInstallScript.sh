@@ -7,53 +7,53 @@ errorlog= 1>/dev/null 2>> ./installlog.log
 
 echo "Making Folders" $echolog
 echo ""
-mkdir ~/apps $errorlog
-mkdir ~/apps/cryptoandcracking $errorlog
-mkdir ~/apps/exploit $errorlog
-mkdir ~/apps/post-exploit $errorlog
-mkdir ~/apps/forensics $errorlog
-mkdir ~/apps/osint $errorlog
-mkdir ~/apps/reversingandbinaryexploit $errorlog
-mkdir ~/apps/scanningandrecon $errorlog
+mkdir ~/apps 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/cryptoandcracking 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/exploit 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/post-exploit 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/forensics 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/osint 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/reversingandbinaryexploit 1>/dev/null 2>> ./installlog.log
+mkdir ~/apps/scanningandrecon 1>/dev/null 2>> ./installlog.log
 
 
 #helpers
 echo "Copying Helpers" $echolog
 echo ""
-cp helpers/* ~/apps $errorlog
+cp helpers/* ~/apps 1>/dev/null 2>> ./installlog.log
 
 # Script Variables
-crypto=~/apps/cryptoandcracking $errorlog
-exploit=~/apps/exploit $errorlog
-postexploit=~/apps/post-exploit $errorlog
-forensics=~/apps/forensics $errorlog
-osint=~/apps/osint $errorlog
-revbin=~/apps/reversingandbinaryexploit $errorlog
-scanrec=~/apps/scanningandrecon $errorlog
+crypto=~/apps/cryptoandcracking
+exploit=~/apps/exploit
+postexploit=~/apps/post-exploit
+forensics=~/apps/forensics
+osint=~/apps/osint
+revbin=~/apps/reversingandbinaryexploit
+scanrec=~/apps/scanningandrecon
 
 
 # From Apt
 echo "Updating OS and Installing Tools From apt" $echolog
 echo ""
-sudo apt-get update $errorlog && sudo apt-get upgrade -y $errorlog && sudo apt-get update $errorlog && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y $errorlog
-sudo apt-get install rubygems build-essentials -y $errorlog
+sudo apt-get update 1>/dev/null 2>> ./installlog.log && sudo apt-get upgrade -y 1>/dev/null 2>> ./installlog.log && sudo apt-get update 1>/dev/null 2>> ./installlog.log && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y 1>/dev/null 2>> ./installlog.log
+sudo apt-get install rubygems build-essentials -y 1>/dev/null 2>> ./installlog.log
 
 
 # Docker Stuff
 echo "Installing Docker" $echolog
 echo ""
-sudo systemctl enable docker --now $errorlog
+sudo systemctl enable docker --now 1>/dev/null 2>> ./installlog.log
 
 printf "%s\n" "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-ce-archive-keyring.gpg] https://download.docker.com/linux/debian buster stable" \
-  | sudo tee /etc/apt/sources.list.d/docker-ce.list $errorlog
+  | sudo tee /etc/apt/sources.list.d/docker-ce.list 1>/dev/null 2>> ./installlog.log
   
 curl -fsSL https://download.docker.com/linux/debian/gpg \
   | gpg --dearmor \
-  | sudo tee /usr/share/keyrings/docker-ce-archive-keyring.gpg $errorlog
+  | sudo tee /usr/share/keyrings/docker-ce-archive-keyring.gpg 1>/dev/null 2>> ./installlog.log
 
-sudo apt update $errorlog
+sudo apt update 1>/dev/null 2>> ./installlog.log
 
-sudo apt install -y docker-ce docker-ce-cli containerd.io $errorlog
+sudo apt install -y docker-ce docker-ce-cli containerd.io 1>/dev/null 2>> ./installlog.log
 
 
 
@@ -70,13 +70,13 @@ export PATH=~/.local/bin:$PATH
 # From npm
 echo "Installing npm" $echolog
 echo ""
-sudo npm install --global jwt-cracker $errorlog
+sudo npm install --global jwt-cracker 1>/dev/null 2>> ./installlog.log
 
 # From Gem
 echo "Installing Tools With gem" $echolog
 echo ""
-sudo gem install haiti-hash -q $errorlog
-sudo gem install evil-winrm -q $errorlog
+sudo gem install haiti-hash -q 1>/dev/null 2>> ./installlog.log
+sudo gem install evil-winrm -q 1>/dev/null 2>> ./installlog.log
 
 #Python Required Modules/Apps
 pip3 install selenium -U -q --log installerror.log
@@ -103,61 +103,61 @@ pip3 install s3scanner -U -q --log installerror.log
 #cryptoandcracking
 echo "Installing duplicut" $echolog
 echo ""
-git clone https://github.com/nil0x42/duplicut.git $crypto/duplicut/ $errorlog
-cd $crypto/duplicut/ && make $errorlog
+git clone https://github.com/nil0x42/duplicut.git $crypto/duplicut/ 1>/dev/null 2>> ./installlog.log
+cd $crypto/duplicut/ && make 1>/dev/null 2>> ./installlog.log
 echo "Installing bopscrk" $echolog
 echo ""
-git clone https://github.com/r3nt0n/bopscrk.git $crypto/bopscrk/ $errorlog
-pip install -r $crypto/bopscrk/requirements.txt $errorlog
+git clone https://github.com/r3nt0n/bopscrk.git $crypto/bopscrk/ 1>/dev/null 2>> ./installlog.log
+pip install -r $crypto/bopscrk/requirements.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing HashPump" $echolog
 echo ""
-git clone https://github.com/bwall/HashPump.git $crypto/hashpump/ $errorlog
-cd $crypto/HashPump $errorlog
-sudo make $errorlog
-sudo make install $errorlog
+git clone https://github.com/bwall/HashPump.git $crypto/hashpump/ 1>/dev/null 2>> ./installlog.log
+cd $crypto/HashPump 1>/dev/null 2>> ./installlog.log
+sudo make 1>/dev/null 2>> ./installlog.log
+sudo make install 1>/dev/null 2>> ./installlog.log
 echo "Installing Hatch" $echolog
 echo ""
-git clone https://github.com/zshell/Hatch.git $crypto/Hatch/ $errorlog
-sudo wget https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_linux64.zip -O /usr/bin && sudo unzip /usr/bin/chromedriver_linux64.zip && sudo rm  /usr/bin/chromedriver_linux64.zip $errorlog
+git clone https://github.com/zshell/Hatch.git $crypto/Hatch/ 1>/dev/null 2>> ./installlog.log
+sudo wget https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_linux64.zip -O /usr/bin && sudo unzip /usr/bin/chromedriver_linux64.zip && sudo rm  /usr/bin/chromedriver_linux64.zip 1>/dev/null 2>> ./installlog.log
 echo "Installing hate_crack" $echolog
 echo ""
-git clone https://github.com/trustedsec/hate_crack.git $crypto/hate_crack/ $errorlog
+git clone https://github.com/trustedsec/hate_crack.git $crypto/hate_crack/ 1>/dev/null 2>> ./installlog.log
 echo "Installing pwngen" $echolog
 echo ""
-git clone https://github.com/toxydose/pnwgen.git $crypto/pnwgen/ $errorlog
+git clone https://github.com/toxydose/pnwgen.git $crypto/pnwgen/ 1>/dev/null 2>> ./installlog.log
 echo "Installing RsaCtfTool" $echolog
 echo ""
-git clone https://github.com/Ganapati/RsaCtfTool.git $crypto/RsaCtfTool/ $errorlog
-pip3 install -r $crypto/RsaCtfTool/requirements.txt $errorlog
+git clone https://github.com/Ganapati/RsaCtfTool.git $crypto/RsaCtfTool/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r $crypto/RsaCtfTool/requirements.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing Mentalist" $echolog
 echo ""
-wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip -O  ~/bin/ $errorlog
-cd ~/bin/ $errorlog
-unzip Mentalist-v1.0-Linux-x86_64.zip && rm Mentalist-v1.0-Linux-x86_64.zip $errorlog
+wget https://github.com/sc0tfree/mentalist/releases/download/v1.0/Mentalist-v1.0-Linux-x86_64.zip -O  ~/bin/ 1>/dev/null 2>> ./installlog.log
+cd ~/bin/ 1>/dev/null 2>> ./installlog.log
+unzip Mentalist-v1.0-Linux-x86_64.zip && rm Mentalist-v1.0-Linux-x86_64.zip 1>/dev/null 2>> ./installlog.log
 
 echo "Installing wordlistctl" $echolog
 echo ""
-git clone https://github.com/BlackArch/wordlistctl $crypto/wordlistctl/ $errorlog
+git clone https://github.com/BlackArch/wordlistctl $crypto/wordlistctl/ 1>/dev/null 2>> ./installlog.log
 echo "Installing Zydra" $echolog
 echo ""
-git clone https://github.com/hamedA2/Zydra.git $crypto/Zydra/ $errorlog
-sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf $errorlog
+git clone https://github.com/hamedA2/Zydra.git $crypto/Zydra/ 1>/dev/null 2>> ./installlog.log
+sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf 1>/dev/null 2>> ./installlog.log
 echo "Installing NoMoreXOR" $echolog
 echo ""
-git clone https://github.com/hiddenillusion/NoMoreXOR.git $crypto/NoMoreXOR/ $errorlog
+git clone https://github.com/hiddenillusion/NoMoreXOR.git $crypto/NoMoreXOR/ 1>/dev/null 2>> ./installlog.log
 echo "Installing rsatool" $echolog
 echo ""
-git clone https://github.com/ius/rsatool.git $crypto/rsatool/ $errorlog
+git clone https://github.com/ius/rsatool.git $crypto/rsatool/ 1>/dev/null 2>> ./installlog.log
 echo "Installing X0R" $echolog
 echo ""
-git clone https://github.com/X-Vector/X0R.git $crypto/X0R/ $errorlog
-pip install -r $crypto/X0R/requirement.txt $errorlog
+git clone https://github.com/X-Vector/X0R.git $crypto/X0R/ 1>/dev/null 2>> ./installlog.log
+pip install -r $crypto/X0R/requirement.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing xor-decrypt" $echolog
 echo ""
-git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ $errorlog
+git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ 1>/dev/null 2>> ./installlog.log
 echo "Installing twofi" $echolog
 echo ""
-git clone https://github.com/digininja/twofi.git $crypto/twofi/ $errorlog
+git clone https://github.com/digininja/twofi.git $crypto/twofi/ 1>/dev/null 2>> ./installlog.log
 #Test and add to alias
 
 #XORMULTILINEFILE SCRIPT INSTALL!
@@ -170,46 +170,46 @@ git clone https://github.com/digininja/twofi.git $crypto/twofi/ $errorlog
 #exploit
 echo "Installing HERCULES" $echolog
 echo ""
-git clone https://github.com/EgeBalci/HERCULES.git $exploit/HERCULES/ $errorlog
-cd $exploit/HERCULES $errorlog
-go get github.com/fatih/color $errorlog
-go run Setup.go $errorlog
+git clone https://github.com/EgeBalci/HERCULES.git $exploit/HERCULES/ 1>/dev/null 2>> ./installlog.log
+cd $exploit/HERCULES 1>/dev/null 2>> ./installlog.log
+go get github.com/fatih/color 1>/dev/null 2>> ./installlog.log
+go run Setup.go 1>/dev/null 2>> ./installlog.log
 
 
 echo "Installing chimera" $echolog
 echo ""
-git clone https://github.com/tokyoneon/chimera.git $exploit/chimera/ $errorlog
-chown $USER:$USER -R $exploit/chimera $errorlog
-chmod +x $exploit/chimera/chimera.sh $errorlog
+git clone https://github.com/tokyoneon/chimera.git $exploit/chimera/ 1>/dev/null 2>> ./installlog.log
+chown $USER:$USER -R $exploit/chimera 1>/dev/null 2>> ./installlog.log
+chmod +x $exploit/chimera/chimera.sh 1>/dev/null 2>> ./installlog.log
 echo "Installing wildpwn" $echolog
 echo ""
-git clone https://github.com/localh0t/wildpwn.git $exploit/wildpwn/ $errorlog
+git clone https://github.com/localh0t/wildpwn.git $exploit/wildpwn/ 1>/dev/null 2>> ./installlog.log
 echo "Installing Xeexe" $echolog
 echo ""
-git clone https://github.com/persianhydra/Xeexe-TopAntivirusEvasion.git $exploit/Xeexe-TopAntivirusEvasion/ $errorlog
-cd $exploit/Xeexe-TopAntivirusEvasion $errorlog
-chmod +x install.sh && ./install.sh $errorlog
-chmod +x $exploit/Xeexe-TopAntivirusEvasion/Xeexe.py $errorlog
+git clone https://github.com/persianhydra/Xeexe-TopAntivirusEvasion.git $exploit/Xeexe-TopAntivirusEvasion/ 1>/dev/null 2>> ./installlog.log
+cd $exploit/Xeexe-TopAntivirusEvasion 1>/dev/null 2>> ./installlog.log
+chmod +x install.sh && ./install.sh 1>/dev/null 2>> ./installlog.log
+chmod +x $exploit/Xeexe-TopAntivirusEvasion/Xeexe.py 1>/dev/null 2>> ./installlog.log
 echo "Installing DKMC" $echolog
 echo ""
-git clone https://github.com/Mr-Un1k0d3r/DKMC.git $exploit/DKMC/ $errorlog
-cd $exploit/DKMC $errorlog
-mkdir output $errorlog
+git clone https://github.com/Mr-Un1k0d3r/DKMC.git $exploit/DKMC/ 1>/dev/null 2>> ./installlog.log
+cd $exploit/DKMC 1>/dev/null 2>> ./installlog.log
+mkdir output 1>/dev/null 2>> ./installlog.log
 echo "Installing fireELF" $echolog
 echo ""
-git clone https://github.com/rek7/fireELF.git $exploit/fireELF/ $errorlog
-pip3 install -r $exploit/firreELF/dep.txt $errorlog
+git clone https://github.com/rek7/fireELF.git $exploit/fireELF/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r $exploit/firreELF/dep.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing OWT" $echolog
 echo ""
-git clone https://github.com/clu3bot/OWT.git $exploit/OWT/ $errorlog
+git clone https://github.com/clu3bot/OWT.git $exploit/OWT/ 1>/dev/null 2>> ./installlog.log
 echo "Installing Seth" $echolog
 echo ""
-git clone https://github.com/SySS-Research/Seth.git $exploit/Seth/ $errorlog
+git clone https://github.com/SySS-Research/Seth.git $exploit/Seth/ 1>/dev/null 2>> ./installlog.log
 echo "Installing XSStrike" $echolog
 echo ""
-git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStirke/ $errorlog
-cd $exploit/XSStrike $errorlog
-pip3 install -r requirements.txt $errorlog
+git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStirke/ 1>/dev/null 2>> ./installlog.log
+cd $exploit/XSStrike 1>/dev/null 2>> ./installlog.log
+pip3 install -r requirements.txt 1>/dev/null 2>> ./installlog.log
 
 
 
@@ -220,30 +220,30 @@ pip3 install -r requirements.txt $errorlog
 #post-exploit
 echo "Installing Girsh" $echolog
 echo ""
-git clone https://github.com/nodauf/Girsh.git $postexploit/Girsh/ $errorlog
+git clone https://github.com/nodauf/Girsh.git $postexploit/Girsh/ 1>/dev/null 2>> ./installlog.log
 echo "Installing enum4linux" $echolog
 echo ""
-git clone https://github.com/cddmp/enum4linux-ng $postexploit/enum4linux-ng/ $errorlog
-cd $postexploit/enum4linux-ng/ $errorlog
-pip3 install -r requirements.txt $errorlog
+git clone https://github.com/cddmp/enum4linux-ng $postexploit/enum4linux-ng/ 1>/dev/null 2>> ./installlog.log
+cd $postexploit/enum4linux-ng/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r requirements.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing linux-exploit-suggester-2" $echolog
 echo ""
-git clone https://github.com/jondonas/linux-exploit-suggester-2.git $postexploit/linux-exploit-suggester-2/ $errorlog
+git clone https://github.com/jondonas/linux-exploit-suggester-2.git $postexploit/linux-exploit-suggester-2/ 1>/dev/null 2>> ./installlog.log
 echo "Installing LinEnum" $echolog
 echo ""
-git clone https://github.com/rebootuser/LinEnum.git $postexploit/LinEnum/ $errorlog
+git clone https://github.com/rebootuser/LinEnum.git $postexploit/LinEnum/ 1>/dev/null 2>> ./installlog.log
 echo "Installing PEASS-ng" $echolog
 echo ""
-git clone https://github.com/carlospolop/PEASS-ng.git $postexploit/PEASS-ng/ $errorlog
+git clone https://github.com/carlospolop/PEASS-ng.git $postexploit/PEASS-ng/ 1>/dev/null 2>> ./installlog.log
 echo "Installing Powerless" $echolog
 echo ""
-git clone https://github.com/gladiatx0r/Powerless.git $postexploit/Powerless/ $errorlog
+git clone https://github.com/gladiatx0r/Powerless.git $postexploit/Powerless/ 1>/dev/null 2>> ./installlog.log
 echo "Installing PrivescCheck" $echolog
 echo ""
-git clone https://github.com/itm4n/PrivescCheck.git $postexploit/PrivescCheck/ $errorlog
+git clone https://github.com/itm4n/PrivescCheck.git $postexploit/PrivescCheck/ 1>/dev/null 2>> ./installlog.log
 echo "Installing peh" $echolog
 echo ""
-git clone https://github.com/melnicek/peh.git $postexploit/peh/ $errorlog
+git clone https://github.com/melnicek/peh.git $postexploit/peh/ 1>/dev/null 2>> ./installlog.log
 
 
 
@@ -253,43 +253,43 @@ git clone https://github.com/melnicek/peh.git $postexploit/peh/ $errorlog
 #forensic
 echo "Installing AudioStego" $echolog
 echo ""
-git clone https://github.com/danielcardeenas/AudioStego.git $forensics/AudioStego/ $errorlog
-cd $forensics/AudioStego $errorlog
-mkdir build $errorlog
-cd build $errorlog
-cmake .. $errorlog
-make $errorlog
-ln -s $forensics/AudioStego/hideme ~/bin/audiostego $errorlog
+git clone https://github.com/danielcardeenas/AudioStego.git $forensics/AudioStego/ 1>/dev/null 2>> ./installlog.log
+cd $forensics/AudioStego 1>/dev/null 2>> ./installlog.log
+mkdir build 1>/dev/null 2>> ./installlog.log
+cd build 1>/dev/null 2>> ./installlog.log
+cmake .. 1>/dev/null 2>> ./installlog.log
+make 1>/dev/null 2>> ./installlog.log
+ln -s $forensics/AudioStego/hideme ~/bin/audiostego 1>/dev/null 2>> ./installlog.log
 echo "Installing autoVolatility" $echolog
 echo ""
-git clone https://github.com/carlospolop/autoVolatility.git $forensics/autoVolatility/ $errorlog
+git clone https://github.com/carlospolop/autoVolatility.git $forensics/autoVolatility/ 1>/dev/null 2>> ./installlog.log
 echo "Installing Depix" $echolog
 echo ""
-git clone https://github.com/beurtschipper/Depix.git $forensics/Depix/ $errorlog
-cd $forensics/Depix/ $errorlog
-pip3 install -r requirements.txt $errorlog
+git clone https://github.com/beurtschipper/Depix.git $forensics/Depix/ 1>/dev/null 2>> ./installlog.log
+cd $forensics/Depix/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r requirements.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing peepdf" $echolog
 echo ""
-git clone https://github.com/jesparza/peepdf.git $forensics/peepdf/ $errorlog
+git clone https://github.com/jesparza/peepdf.git $forensics/peepdf/ 1>/dev/null 2>> ./installlog.log
 echo "Installing ssh_decoder" $echolog
 echo ""
-git clone https://github.com/jjyg/ssh_decoder.git $forensics/ssh_decoder/ $errorlog
+git clone https://github.com/jjyg/ssh_decoder.git $forensics/ssh_decoder/ 1>/dev/null 2>> ./installlog.log
 echo "Installing stegsolve" $echolog
 echo ""
-mkdir $forensics/stegsolve $errorlog
-wget http://www.caesum.com/handbook/Stegsolve.jar -O $forensics/stegsolve/stegsolve.jar $errorlog
-chmod +x $forensics/stegsolve/stegsolve.jar $errorlog
+mkdir $forensics/stegsolve 1>/dev/null 2>> ./installlog.log
+wget http://www.caesum.com/handbook/Stegsolve.jar -O $forensics/stegsolve/stegsolve.jar 1>/dev/null 2>> ./installlog.log
+chmod +x $forensics/stegsolve/stegsolve.jar 1>/dev/null 2>> ./installlog.log
 echo "Installing Exiftool" $echolog
 echo ""
-mkdir $forensics/Exiftool $errorlog
-wget https://exiftool.org/Image-ExifTool-12.30.tar.gz -O $forensics/Exiftool/ $errorlog
-cd $forensics/Exiftool $errorlog
-tar zxvf Image-ExifTool-12.tar.gz $errorlog
-ln -s $forensics/Exiftool/Image-ExifTool-12.30/exiftool ~/bin/exiftool $errorlog
-rm $forensics/Exiftool/Image-ExifTool-12.30.tar.gz $errorlog
+mkdir $forensics/Exiftool 1>/dev/null 2>> ./installlog.log
+wget https://exiftool.org/Image-ExifTool-12.30.tar.gz -O $forensics/Exiftool/ 1>/dev/null 2>> ./installlog.log
+cd $forensics/Exiftool 1>/dev/null 2>> ./installlog.log
+tar zxvf Image-ExifTool-12.tar.gz 1>/dev/null 2>> ./installlog.log
+ln -s $forensics/Exiftool/Image-ExifTool-12.30/exiftool ~/bin/exiftool 1>/dev/null 2>> ./installlog.log
+rm $forensics/Exiftool/Image-ExifTool-12.30.tar.gz 1>/dev/null 2>> ./installlog.log
 echo "Installing volatility3" $echolog
 echo ""
-git clone https://github.com/volatilityfoundation/volatility3.git $forensics/volatility3/ $errorlog
+git clone https://github.com/volatilityfoundation/volatility3.git $forensics/volatility3/ 1>/dev/null 2>> ./installlog.log
 
 
 
@@ -307,42 +307,42 @@ git clone https://github.com/volatilityfoundation/volatility3.git $forensics/vol
 #osint
 echo "Installing Ghunt" $echolog
 echo ""
-git clone https://github.com/mxrch/Ghunt.git $osint/Ghunt/ $errorlog
+git clone https://github.com/mxrch/Ghunt.git $osint/Ghunt/ 1>/dev/null 2>> ./installlog.log
 echo "Installing gitGraber" $echolog
 echo ""
-git clone https://github.com/hisxo/gitGraber.git $osint/gitGraber/ $errorlog
-cd $osint/gitGraber/ $errorlog
-pip3 install -r requirements.txt $errorlog
+git clone https://github.com/hisxo/gitGraber.git $osint/gitGraber/ 1>/dev/null 2>> ./installlog.log
+cd $osint/gitGraber/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r requirements.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing CardPwn" $echolog
 echo ""
-git clone https://github.com/itsmehacker/CardPwn.git $osint/CardPwn/ $errorlog
-cd $osint/CardPwn/ $errorlog
-pip3 install -r requirements.txt $errorlog
+git clone https://github.com/itsmehacker/CardPwn.git $osint/CardPwn/ 1>/dev/null 2>> ./installlog.log
+cd $osint/CardPwn/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r requirements.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing SocialintFramework" $echolog
 echo ""
-git clone https://github.com/Pyshios/SocialintFramework.git $osint/SocialintFramework $errorlog
-cd $osint/SocialintFramework/ $errorlog
-pip3 install -r requeriments.txt $errorlog
+git clone https://github.com/Pyshios/SocialintFramework.git $osint/SocialintFramework 1>/dev/null 2>> ./installlog.log
+cd $osint/SocialintFramework/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r requeriments.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing Scavenger" $echolog
 echo ""
-git clone https://github.com/rndinfosecguy/Scavenger.git $osint/Scavenger/ $errorlog
+git clone https://github.com/rndinfosecguy/Scavenger.git $osint/Scavenger/ 1>/dev/null 2>> ./installlog.log
 echo "Installing spiderfoot" $echolog
 echo ""
-mkdir $osint/spiderfoot $errorlog
-wget https://github.com/smicallef/spiderfoot/archive/v3.4.tar.gz $osin/spiderfoot $errorlog
-$osint/spiderfoot/tar zxvf v3.4.tar.gz $errorlog
-cd $osint/spiderfoot/ $errorlog
-pip3 install -r requeriments.txt $errorlog
+mkdir $osint/spiderfoot 1>/dev/null 2>> ./installlog.log
+wget https://github.com/smicallef/spiderfoot/archive/v3.4.tar.gz $osin/spiderfoot 1>/dev/null 2>> ./installlog.log
+$osint/spiderfoot/tar zxvf v3.4.tar.gz 1>/dev/null 2>> ./installlog.log
+cd $osint/spiderfoot/ 1>/dev/null 2>> ./installlog.log
+pip3 install -r requeriments.txt 1>/dev/null 2>> ./installlog.log
 echo "Installing gitjacker" $echolog
 echo ""
-mkdir $osint/gitjacker/ $errorlog
-cd $osint/gitjacker/ $errorlog
-curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash $errorlog
+mkdir $osint/gitjacker/ 1>/dev/null 2>> ./installlog.log
+cd $osint/gitjacker/ 1>/dev/null 2>> ./installlog.log
+curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash 1>/dev/null 2>> ./installlog.log
 echo "Installing yar" $echolog
 echo ""
-mkdir $osint/yar/ $errorlog
-cd $osint/yar $errorlog
-go get github.com/nielsing/yar $errorlog
+mkdir $osint/yar/ 1>/dev/null 2>> ./installlog.log
+cd $osint/yar 1>/dev/null 2>> ./installlog.log
+go get github.com/nielsing/yar 1>/dev/null 2>> ./installlog.log
 
 
 
@@ -352,22 +352,22 @@ go get github.com/nielsing/yar $errorlog
 #reversing and binary exploitation
 echo "Installing Overflow-Helper" $echolog
 echo ""
-git clone https://github.com/LegendBegins/Overflow-Helper.git $revbin/Overflow-Helper/ $errorlog
+git clone https://github.com/LegendBegins/Overflow-Helper.git $revbin/Overflow-Helper/ 1>/dev/null 2>> ./installlog.log
 echo "Installing ropstar" $echolog
 echo ""
-git clone https://github.com/xct/ropstar.git $revbin/ropstar/ $errorlog
+git clone https://github.com/xct/ropstar.git $revbin/ropstar/ 1>/dev/null 2>> ./installlog.log
 echo "Installing jd-gui" $echolog
 echo ""
-git clone https://github.com/java-decompiler/jd-gui.git $revbin/jd-gui/ $errorlog
-cd $revbin/jd-gui $errorlog
-./gradlew build $errorlog
-ln -s $revbin/jd-gui ~/bin/jd-gui $errorlog
+git clone https://github.com/java-decompiler/jd-gui.git $revbin/jd-gui/ 1>/dev/null 2>> ./installlog.log
+cd $revbin/jd-gui 1>/dev/null 2>> ./installlog.log
+./gradlew build 1>/dev/null 2>> ./installlog.log
+ln -s $revbin/jd-gui ~/bin/jd-gui 1>/dev/null 2>> ./installlog.log
 echo "Installing peframe" $echolog
 echo ""
-git clone https://github.com/guelfoweb/peframe.git $revbin/peframe/ $errorlog
-cd $revbin/peframe $errorlog
-sudo bash install.sh $errorlog
-python3 setup.py install $errorlog
+git clone https://github.com/guelfoweb/peframe.git $revbin/peframe/ 1>/dev/null 2>> ./installlog.log
+cd $revbin/peframe 1>/dev/null 2>> ./installlog.log
+sudo bash install.sh 1>/dev/null 2>> ./installlog.log
+python3 setup.py install 1>/dev/null 2>> ./installlog.log
 
 
 
@@ -376,9 +376,9 @@ python3 setup.py install $errorlog
 #scanning and recon
 echo "Installing AutoRecon" $echolog
 echo ""
-git clone https://github.com/Tib3rius/AutoRecon.git $scanrec/AutoRecon/ $errorlog
-cd $scanrec/AutoRecon $errorlog
-pip3 install -r requirements.txt $errorlog
+git clone https://github.com/Tib3rius/AutoRecon.git $scanrec/AutoRecon/ 1>/dev/null 2>> ./installlog.log
+cd $scanrec/AutoRecon 1>/dev/null 2>> ./installlog.log
+pip3 install -r requirements.txt 1>/dev/null 2>> ./installlog.log
 
 
 
