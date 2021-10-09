@@ -2,8 +2,8 @@
 
 #Install Script For CTF
 
-echolog=| tee -a installerrors.log  
-errorlog=> /dev/null 2>> installerrors.log
+echolog= 1>./installlog.log
+errorlog= 1>/dev/null 2>> ./installlog.log
 
 echo "Making Folders" $echolog
 echo ""
@@ -35,7 +35,7 @@ scanrec=~/apps/scanningandrecon $errorlog
 # From Apt
 echo "Updating OS and Installing Tools From apt" $echolog
 echo ""
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get update && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y $errorlog
+sudo apt-get update $errorlog && sudo apt-get upgrade -y $errorlog && sudo apt-get update $errorlog && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip -y $errorlog
 sudo apt-get install rubygems build-essentials -y $errorlog
 
 
@@ -79,26 +79,24 @@ sudo gem install haiti-hash -q $errorlog
 sudo gem install evil-winrm -q $errorlog
 
 #Python Required Modules/Apps
-echo "Installing python Modules" $echolog
-echo ""
-pip3 install selenium -U $errorlog
-pip3 install requests -U $errorlog
-pip3 install py-term -U $errorlog
-pip3 install pyasn1 -U $errorlog
-pip3 install gmpy2 -U $errorlog
+pip3 install selenium -U -q --log installerror.log
+pip3 install requests -U -q --log installerror.log
+pip3 install py-term -U -q --log installerror.log
+pip3 install pyasn1 -U -q --log installerror.log
+pip3 install gmpy2 -U -q --log installerror.log
 #pip3 install pyv8
-pip3 install pylibemu -U $errorlog
-pip3 install pwntools -U $errorlog
-pip3 install bs4 -U $errorlog
-pip3 install search-that-hash -U $errorlog
-pip3 install ttpassgen -U $errorlog
-pip3 install pefile -U $errorlog
-pip3 install apkleaks -U $errorlog
-pip3 install h8mail -U $errorlog
-pip3 install fuzza -U $errorlog
-pip3 install libssl-dev -U $errorlog
-pip3 install swig -U $errorlog
-pip3 install s3scanner -U $errorlog
+pip3 install pylibemu -U -q --log installerror.log
+pip3 install pwntools -U -q --log installerror.log
+pip3 install bs4 -U -q --log installerror.log
+pip3 install search-that-hash -U -q --log installerror.log
+pip3 install ttpassgen -U -q --log installerror.log
+pip3 install pefile -U -q --log installerror.log
+pip3 install apkleaks -U -q --log installerror.log
+pip3 install h8mail -U -q --log installerror.log
+pip3 install fuzza -U -q --log installerror.log
+pip3 install libssl-dev -U -q --log installerror.log
+pip3 install swig -U -q --log installerror.log
+pip3 install s3scanner -U -q --log installerror.log
 
 # From Git
 
