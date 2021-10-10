@@ -76,7 +76,7 @@ The script does require some interaction when it is running but it should be saf
 - [wildpwn](https://github.com/localh0t/wildpwn)
 - [Xexee-TopAntivirusEvasion](https://github.com/persianhydra/Xeexe-TopAntivirusEvasion)
 - [OWT](https://github.com/clu3bot/OWT)
-- [XSStrike][https://github.com/s0md3v/XSStrike]
+- [XSStrike](https://github.com/s0md3v/XSStrike)
 
 
 
@@ -101,7 +101,7 @@ The script does require some interaction when it is running but it should be saf
 - [autoVolatility](https://github.com/carlospolop/autoVolatility)
 - [binwalk](https://github.com/ReFirmLabs/binwalk)
 - [depix](https://github.com/beurtschipper/Depix)
-- [exiftool](ttps://github.com/exiftool/exiftool)
+- [exiftool](https://github.com/exiftool/exiftool)
 - [foremost](http://foremost.sourceforge.net/)
 - [peepdf](https://github.com/jesparza/peepdf)
 - [ssh_decoder](https://github.com/jjyg/ssh_decoder)
