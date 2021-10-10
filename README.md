@@ -32,9 +32,9 @@ The script does require some interaction when it is running but it should be saf
 
 ## Tools included ##
 
-========
-Crypto and Cracking
-========
+
+### Crypto and Cracking
+
 - [bopscrk](https://github.com/R3nt0n/bopscrk)
 - [CeWL](https://github.com/digininja/CeWL)
 - [crunch](https://sourceforge.net/projects/crunch-wordlist/)
@@ -59,112 +59,88 @@ Crypto and Cracking
 - [X0R](https://github.com/X-Vector/X0R)
 - [xor-decrypt](https://github.com/AlexFSmirnov/xor-decrypt)
 - [Zydra](https://github.com/hamedA2/Zydra)
-=======
-=======
 
 
 
-=======
-Exploit
-=======
-- chimera               [https://github.com/tokyoneon/chimera]
-- dkmc                  [https://github.com/Mr-Un1k0d3r/DKMC]     
-- evil-winrm            [https://github.com/Hackplayers/evil-winrm]
-- fireelf               [https://github.com/rek7/fireELF]
-- pwncat                [https://github.com/cytopia/pwncat]
-- routersploit          [https://github.com/threat9/routersploit]
-- seth                  [https://github.com/SySS-Research/Seth]
-- sqlmap                [https://github.com/sqlmapproject/sqlmap]
-- veil                  [https://github.com/Veil-Framework/Veil]
-- wildpwn               [https://github.com/localh0t/wildpwn]
-- xexee                 [https://github.com/persianhydra/Xeexe-TopAntivirusEvasion]
-- owt                   [https://github.com/clu3bot/OWT]
-- xsstrike              [https://github.com/s0md3v/XSStrike]
-=======
-=======
+### Exploit
+
+- [chimera](https://github.com/tokyoneon/chimera)
+- [DKMC](https://github.com/Mr-Un1k0d3r/DKMC)
+- [evil-winrm](https://github.com/Hackplayers/evil-winrm)
+- [fireELF](https://github.com/rek7/fireELF)
+- [pwncat](https://github.com/cytopia/pwncat)
+- [routersploit](https://github.com/threat9/routersploit)
+- [Seth](https://github.com/SySS-Research/Seth)
+- [sqlmap](https://github.com/sqlmapproject/sqlmap)
+- [Veil](https://github.com/Veil-Framework/Veil)
+- [wildpwn](https://github.com/localh0t/wildpwn)
+- Xexee-TopAntivirusEvasion(https://github.com/persianhydra/Xeexe-TopAntivirusEvasion)
+- [OWT](https://github.com/clu3bot/OWT)
+- [XSStrike][https://github.com/s0md3v/XSStrike]
 
 
 
-=======
-Post-Exploit - NOTE: Several of these are designed to be run on the target system
-=======
-- bloodhound
-- girsh                                               [https://github.com/nodauf/Girsh]
-- enum4linux                                          [https://github.com/cddmp/enum4linux-ng]
-- linux-exploit-suggester-2                           [https://github.com/jondonas/linux-exploit-suggester-2]
-- linenum                                             [https://github.com/rebootuser/LinEnum]
-- linenumdir (jump to directory)                      [https://github.com/rebootuser/LinEnum]
-- powerlessdir (jump to directory)                    [https://github.com/gladiatx0r/Powerless]
-- powersploit (will output directory structure)       [https://github.com/PowerShellMafia/PowerSploit]
-- privesccheckdir (jump to directory)                 [https://github.com/itm4n/PrivescCheck]
-- linPEASdir (jump to directory)                      [https://github.com/carlospolop/PEASS-ng]
-- winPEASdir (jump to directory)                      [https://github.com/carlospolop/PEASS-ng]
-- peh                                                 [https://github.com/melnicek/peh]
-=======
-=======
+### Post-Exploit
+
+- [BloodHound](https://github.com/BloodHoundAD/BloodHound)
+- [Girsh][https://github.com/nodauf/Girsh]
+- [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)
+- [linux-exploit-suggester-2](https://github.com/jondonas/linux-exploit-suggester-2)
+- [LinEnum](https://github.com/rebootuser/LinEnum)
+- [Powerless](https://github.com/gladiatx0r/Powerless)
+- [Powersploit](https://github.com/PowerShellMafia/PowerSploit)
+- [Privesccheck](https://github.com/itm4n/PrivescCheck)
+- [PEASS-ng](https://github.com/carlospolop/PEASS-ng)
+- [peh](https://github.com/melnicek/peh)
 
 
 
-=======
-Forensics
-=======
-- audiostego               [https://github.com/danielcardeenas/AudioStego]
-- autovolatility           [https://github.com/carlospolop/autoVolatility]
-- binwalk                  [https://github.com/ReFirmLabs/binwalk]
-- depix                    [https://github.com/beurtschipper/Depix]
-- exiftool                 [https://github.com/exiftool/exiftool]
-- foremost                 [http://foremost.sourceforge.net/]
-- peepdf                   [https://github.com/jesparza/peepdf]
-- ssh_decoder              [https://github.com/jjyg/ssh_decoder]
-- stegsolve                [https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve]
-=======
-=======
+### Forensics
+
+- [AudioStego](https://github.com/danielcardeenas/AudioStego)
+- [autoVolatility](https://github.com/carlospolop/autoVolatility)
+- [binwalk](https://github.com/ReFirmLabs/binwalk)
+- [depix](https://github.com/beurtschipper/Depix)
+- [exiftool](ttps://github.com/exiftool/exiftool)
+- [foremost](http://foremost.sourceforge.net/)
+- [peepdf](https://github.com/jesparza/peepdf)
+- [ssh_decoder](https://github.com/jjyg/ssh_decoder)
+- [stegsolve](https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve)
 
 
 
-=======
-Mobile
-=======
-- apktool               [https://github.com/iBotPeaches/Apktool]
-- apkleaks              [https://github.com/dwisiswant0/apkleaks]
-=======
-=======
+### Mobile
+
+- [Apktool](https://github.com/iBotPeaches/Apktool)
+- [apkleaks](https://github.com/dwisiswant0/apkleaks)
 
 
 
-=======
-OSINT
-=======
-- gitgraberdir (jump to directory)              [https://github.com/hisxo/gitGraber]
-- sherlock                                      [https://github.com/sherlock-project/sherlock]
-- cardpwn                                       [https://github.com/itsmehacker/CardPwn]
-- h8mail                                        [https://github.com/khast3x/h8mail]
-- gitjacker                                     [https://github.com/liamg/gitjacker]
-- sif (Social Int Framework)                    [https://github.com/Pyshios/SocialintFramework]                                
-- shodansploit                                  [https://github.com/shodansploit/shodansploit]
-- scavenger                                     [https://github.com/rndinfosecguy/Scavenger]
-=======
-=======
+### OSINT
+
+- [gitgraber](https://github.com/hisxo/gitGraber)
+- [sherlock](https://github.com/sherlock-project/sherlock)
+- [cardpwn](https://github.com/itsmehacker/CardPwn)
+- [h8mail](https://github.com/khast3x/h8mail)
+- [gitjacker](https://github.com/liamg/gitjacker)
+- [SocialintFramework](https://github.com/Pyshios/SocialintFramework)
+- [shodansploit](https://github.com/shodansploit/shodansploit)
+- [scavenger](https://github.com/rndinfosecguy/Scavenger)
 
 
 
-=======
-Reversing and Binary Exploit
-=======
-- fuzza                 [https://github.com/cytopia/fuzza]
-- jd-gui                [https://github.com/java-decompiler/jd-gui]
-- overflowhelper        [https://github.com/rhuss623/OverflowHelper]
-- peframe               [https://github.com/guelfoweb/peframe]
-- ropstar               [https://github.com/xct/ropstar]
-=======
-=======
+### Reversing and Binary Exploit
+
+- [fuzza](https://github.com/cytopia/fuzza)
+- [jd-gui](https://github.com/java-decompiler/jd-gui)
+- [OverflowHelper](https://github.com/rhuss623/OverflowHelper)
+- [peframe](https://github.com/guelfoweb/peframe)
+- [ropstar](https://github.com/xct/ropstar)
 
 
 
-=======
-Scanning and Recon
-=======
-- shodansploit       [https://github.com/shodansploit/shodansploit]
-- sn1per             [https://github.com/1N3/Sn1per]
-=======
-=======
+### Scanning and Recon
+
+- [AutoRecon](https://github.com/Tib3rius/AutoRecon)
+- [sn1per](https://github.com/1N3/Sn1per)
+
