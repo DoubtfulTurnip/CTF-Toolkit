@@ -1,6 +1,6 @@
 ![Logo](https://github.com/DoubtfulTurnip/DTTermTheme/blob/main/Screenshots/DTLogo.png?raw=true)
 
-[Gitbook](https://doubtfulturnip.gitbook.io/dts-cybersecurity-tool-kit/)
+[Doubtful Turnip's Gitbook](https://doubtfulturnip.gitbook.io/dts-cybersecurity-tool-kit/)
 
 # CTFtoolkit
 
