@@ -35,6 +35,14 @@ sudo ./CTFInstallScript.sh
 The script does require some interaction when it is running but it should be safe to just accept any defaults 
 
 
+## Usage ##
+
+Once the installation is complete, close/restart the terminal to allow the aliases to update. Running the following command provides some options for assisting you with the tools that have been installed.
+
+```
+apphelp
+```
+Note: The docker containers have not yet been implemented (next on the list to do) but option 12 lists all the available tools and the commands to start them
 
 
 ## Tools included ##
