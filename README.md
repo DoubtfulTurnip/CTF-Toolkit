@@ -1,10 +1,14 @@
 # CTFtoolkit
 
-There is nothing particularly special about this script. It just installs several tools that I have found useful for CTF challenges. It is in a very alpha release state at the moment but I am looking to make it a lot more streamline as I improve it and add more tools.
+=== Stil very much in testing phase but it kind of works ===
 
-I have written this script with the intention of it being used on a clean install of Kali Linux for the purpose of using it for CTF challenges, which can then be deleted/removed once complete. I would not recommend using this on your production installation of Kali Linux.
+There is nothing particularly special about this script. It just installs several tools that I have found useful for CTF challenges. It is in a very alpha release state at the moment but I am looking to make it a lot more streamline as I improve it and add more tools. 
 
+I have written this script with the intention of it being used on a clean install of [Kali Linux](https://www.kali.org/) for the purpose of using it for CTF challenges, which can then be deleted/removed once complete. I would not recommend using this on your production installation of Kali Linux.
 
+I made this script for me, to try and make my life a bit easier when preparing for CTF competitions 
+
+In addition to installing some tools from Github this will also update the OS and apt packages and also install [Docker](https://www.docker.com/)
 
 
 ## Install ##
@@ -29,6 +33,9 @@ sudo ./CTFInstallScript.sh
 ```
 
 The script does require some interaction when it is running but it should be safe to just accept any defaults 
+
+
+
 
 ## Tools included ##
 
