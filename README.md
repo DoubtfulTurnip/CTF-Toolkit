@@ -1,5 +1,7 @@
 ![Logo](https://github.com/DoubtfulTurnip/DTTermTheme/blob/main/Screenshots/DTLogo.png?raw=true)
 
+[Gitbook](https://doubtfulturnip.gitbook.io/dts-cybersecurity-tool-kit/)
+
 # CTFtoolkit
 
 === Stil very much in testing phase but it kind of works ===
