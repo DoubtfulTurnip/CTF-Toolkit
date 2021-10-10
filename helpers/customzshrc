@@ -63,7 +63,6 @@ alias ropstar='python3 ~/apps/reversingandbinaryexploit/ropstar/ropstar.py'
 alias jd-gui='java -jar ~/bin/jd-gui'
 
 # Scanning and recon
-alias autorecon='python3 ~/apps/scanningandrecon/Autorecon/src/autorecon/autorecon.py'
 alias s3scanner='python3 ~/apps/scanningandrecon/S3Scanner/s3scanner.py'
 alias shodansploit='sudo docker run --rm -it ismailtasdelen/shodansploit'
 alias sn1per='sudo docker run -it --rm xerosecurity/sn1per /bin/bash'

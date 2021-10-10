@@ -34,8 +34,8 @@ scanrec=~/apps/scanningandrecon
 # From Apt
 echo "Updating OS and Installing Tools From apt" | tee -a ./install.log
 echo ""
-sudo apt-get update 1>/dev/null 2>> ./install.log && sudo apt-get upgrade -y 1>/dev/null 2>> ./install.log && sudo apt-get update 1>/dev/null 2>> ./install.log && sudo apt-get install amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip twofi hercules jd-gui -y 1>/dev/null 2>> ./install.log
-sudo apt-get install rubygems build-essentials -y 1>/dev/null 2>> ./install.log
+sudo apt-get update 1>/dev/null 2>> ./install.log && sudo apt-get upgrade -y 1>/dev/null 2>> ./install.log && sudo apt-get update 1>/dev/null 2>> ./install.log && sudo apt-get install wkhtmltopdf redis-tools amass sherlock forensics-extra veil bloodhound libboost-all-dev cmake pwncat routersploit sqlmap armitage npm nodejs g++ libssl-dev cewl libgmp3-dev libmpc-dev qpdf unrar sed xxd libc-bin curl jq perl gawk grep coreutils git golang seclists enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum sslscan tnscmd10g whatweb fcrackzip hashcat hash-identifier python3-pip twofi hercules jd-gui -y 1>/dev/null 2>> ./install.log
+sudo apt-get install rubygems build-essential -y 1>/dev/null 2>> ./install.log
 
 
 # Docker Stuff
