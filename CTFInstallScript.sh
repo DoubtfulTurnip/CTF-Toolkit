@@ -2,8 +2,9 @@
 
 #Install Script For CTF
 
-
-echo "Making Folders" | tee -a ./install.log
+echo ""
+echo ""
+echo "Creating Folders" | tee -a ./install.log
 echo ""
 mkdir ~/apps 1>/dev/null 2>> ./install.log
 mkdir ~/apps/cryptoandcracking 1>/dev/null 2>> ./install.log
@@ -103,7 +104,8 @@ pip3 install fuzzywuzzy -U -q --log pipinstall.log
 
 
 # From Git
-
+echo "Installing tools from Github" | tee -a ./install.log
+echo ""
 
 #cryptoandcracking
 
@@ -308,7 +310,7 @@ echo "Installing Ghunt" | tee -a ./install.log
 echo ""
 git clone https://github.com/mxrch/Ghunt.git $osint/Ghunt/ 1>/dev/null 2>> ./install.log
 cd $osint/Ghunt/
-python3 -m pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo "Installing gitGraber" | tee -a ./install.log
 echo ""
@@ -355,7 +357,7 @@ echo ""
 git clone https://github.com/guelfoweb/peframe.git $revbin/peframe/ 1>/dev/null 2>> ./install.log
 cd $revbin/peframe 1>/dev/null 2>> ./install.log
 sudo bash install.sh
-python3 setup.py install
+sudo python3 setup.py install
 
 
 
@@ -378,3 +380,14 @@ for zshrc_file in ~/.zshrc; do
         echo "source ~/apps/customzshrc" >> $zshrc_file
     fi
 done
+
+echo ""
+echo ""
+echo ""
+echo "Installation Complete" | tee -a ./install.log
+echo "Installation Complete" | tee -a ./install.log
+echo "Restart your terminal for changes to take effect"
+echo "Once you have done this run apphelp to start using the new tools"
+echo ""
+echo ""
+echo ""
