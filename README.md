@@ -65,7 +65,6 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 - [hydra](https://github.com/vanhauser-thc/thc-hydra)
 - [jwt-cracker](https://github.com/lmammino/jwt-cracker)
 - [john](https://www.openwall.com/john/)
-- [NoMoreXOR](https://github.com/hiddenillusion/NoMoreXOR)
 - [pnwgen](https://github.com/toxydose/pnwgen)
 - [RsaCtfTool](https://github.com/Ganapati/RsaCtfTool)
 - [rsatool](https://github.com/ius/rsatool)
