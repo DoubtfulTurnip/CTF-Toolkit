@@ -1,29 +1,41 @@
 #!/bin/bash
 PS3='Choose your poison: '
-apps=("Start MHA Docker" "Stop MHA Docker" "Start Autosploit Docker" "Stop Autosploit Docker" "Start NoSQLMap Docker" "Start stego-toolkit Docker" "Start Juiceshop Docker" "Stop Juiceshop Docker" "Start Spiderfoot Docker" "Stop Spiderfoot Docker" "Update All Apps" "Print List of Tools" "Quit")
+apps=("Start Portainer" "Start MHA Docker" "Stop MHA Docker" "Start Autosploit Docker" "Stop Autosploit Docker" "Start NoSQLMap Docker" "Start stego-toolkit Docker" "Start Juiceshop Docker" "Stop Juiceshop Docker" "Start Spiderfoot Docker" "Stop Spiderfoot Docker" "Update All Apps" "Print List of Tools" "Quit")
 select fav in "${apps[@]}"; do
     case $fav in
+        "Start Portainer")
+            echo "Start Portainer"
+	    sudo docker container start portainer && echo "Portainer should now be available on localhost:9000"   
+       break
+            ;;
+        "Stop Portainer")
+            echo "Start Portainer"
+	    sudo docker container stop portainer && echo "Portainer has been shut down"
+       break
+            ;;
         "Start MHA Docker")
             echo "Start the Mail Header Analyzer Server"
-	    /home/kali/apps/blueteam/email-header-analyzer/mhastart.sh
+	    sudo docker container start mail-header-analyzer && echo "Mail Header Analyzer should now be available on localhost:8080"
+       break
             ;;
         "Stop MHA Docker")
             echo "Stop the Mail Header Analyzer Server"
-	    /home/kali/apps/blueteam/email-header-analyzer/mhastop.sh
+	   sudo docker container stop mail-header-analyzer && echo "Mail Header Analyzer has been shut down"
+      break
             ;;
         "Start Autosploit Docker")
             echo "Start Autosploit"
-	    /home/kali/apps/exploit/AutoSploit/Docker/startautosploit.sh
+	    sudo docker container start autosploit && echo "AutoSploit should now be available on http://localhost:2000 and https://localhost:2001"
 	    break
             ;;
         "Stop Autosploit Docker")
             echo "Stop Autosploit"
-	    /home/kali/apps/exploit/AutoSploit/Docker/stopautosploit.sh
+	    sudo docker container stop autosploit && echo "AutoSploit has been shut down"
 	    break
             ;;            
          "Start NoSQLMap Docker")
             echo "Start NoSQLMap"
-	    /home/kali/apps/exploit/NoSQLMap/startnosqlmap.sh
+	    sudo docker-compose run ~/apps/exploit/NoSQLMap/nosqlmap
 	    break
             ;;
          "Start stego-toolkit Docker")
@@ -33,31 +45,31 @@ select fav in "${apps[@]}"; do
             echo ""
             echo "Starting stego-toolkit"
             echo "Type exit to quit"
-            sudo docker run -it --rm -v $pwd/data/:/data dominicbreuker/stego-toolkit /bin/bash
+            sudo docker run -it --rm -v ~/apps/forensics/stego-toolkit/data:/data dominicbreuker/stego-toolkit /bin/bash
             break
             ;;
          "Start Juiceshop Docker")
             echo ""
             echo ""
-	    /home/kali/Juiceshop/start-juiceshop
+	    sudo docker container start juiceshop && echo "Juiceshop should now be available on localhost:3000"
 	    break
             ;;
          "Stop Juiceshop Docker")
             echo ""
             echo ""
-	    /home/kali/Juiceshop/stop-juiceshop
+	     sudo docker container stop juiceshop && echo "Juiceshop has been shut down"
 	    break
             ;;
          "Start Spiderfoot Docker")
             echo ""
             echo ""
-	    /home/kali/apps/osint/spiderfoot/startspiderfoot
+	    sudo docker container start spiderfoot && echo "spiderfoot should now be available on localhost:5009"
 	    break
             ;;        
          "Stop Spiderfoot Docker")
             echo ""
             echo ""
-	    /home/kali/apps/osint/spiderfoot/stopspiderfoot
+	    sudo docker container stop spiderfoot && echo "Spiderfoot has been shut down"
 	    break
             ;;
 	 "Update All Apps")
@@ -71,6 +83,14 @@ select fav in "${apps[@]}"; do
             echo ""
             echo "These apps can be run from the terminal as they are shown below and can be run from any location"
             echo "
+
+========
+Blueteam
+========
+- E-Mail Header Analyzer (docker)                                                      [https://github.com/cyberdefenders/email-header-analyzer]
+
+
+
 ========
 Crypto and Cracking
 ========
@@ -105,6 +125,7 @@ Crypto and Cracking
 =======
 Exploit
 =======
+- AutoSploit (docker)                                                                  [https://github.com/NullArray/AutoSploit]                                                                         
 - chimera                                                                              [https://github.com/tokyoneon/chimera]
 - dkmc                                                                                 [https://github.com/Mr-Un1k0d3r/DKMC]     
 - evil-winrm                                                                           [https://github.com/Hackplayers/evil-winrm]
@@ -181,6 +202,7 @@ OSINT
 - sif (Social Int Framework)                                                          [https://github.com/Pyshios/SocialintFramework]                                
 - shodansploit                                                                        [https://github.com/shodansploit/shodansploit]
 - scavenger                                                                           [https://github.com/rndinfosecguy/Scavenger]
+- spiderfoot (docker)
 =======
 =======
 
@@ -207,6 +229,15 @@ Scanning and Recon
 =======
 =======
 
+
+
+=======
+Misc
+=======
+- Portainer (docker)                                                                  [https://www.portainer.io/]
+- Juiceshop (docker)                                                                  [https://github.com/juice-shop/juice-shop]
+=======
+=======
 
 
 "	

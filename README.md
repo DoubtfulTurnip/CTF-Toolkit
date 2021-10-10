@@ -52,6 +52,12 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 ## Tools included ##
 
 
+
+### Blueteam
+- [E-Mail Header Analyzer](https://github.com/cyberdefenders/email-header-analyzer)
+
+
+
 ### Crypto and Cracking
 
 - [bopscrk](https://github.com/R3nt0n/bopscrk)
@@ -82,6 +88,7 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 
 ### Exploit
 
+- [AutoSploit](https://github.com/NullArray/AutoSploit)
 - [chimera](https://github.com/tokyoneon/chimera)
 - [DKMC](https://github.com/Mr-Un1k0d3r/DKMC)
 - [evil-winrm](https://github.com/Hackplayers/evil-winrm)
@@ -94,6 +101,7 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 - [wildpwn](https://github.com/localh0t/wildpwn)
 - [Xexee-TopAntivirusEvasion](https://github.com/persianhydra/Xeexe-TopAntivirusEvasion)
 - [OWT](https://github.com/clu3bot/OWT)
+- [NoSQLMap](https://github.com/codingo/NoSQLMap)
 - [XSStrike](https://github.com/s0md3v/XSStrike)
 
 
@@ -124,6 +132,7 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 - [peepdf](https://github.com/jesparza/peepdf)
 - [ssh_decoder](https://github.com/jjyg/ssh_decoder)
 - [stegsolve](https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve)
+- [stego-toolkit](https://github.com/DominicBreuker/stego-toolkit)
 
 
 
@@ -161,4 +170,11 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 
 - [AutoRecon](https://github.com/Tib3rius/AutoRecon)
 - [sn1per](https://github.com/1N3/Sn1per)
+
+
+
+### Misc
+
+- [Portainer](https://www.portainer.io/)
+- [Juice-Shop](https://github.com/juice-shop/juice-shop)
 
