@@ -83,7 +83,7 @@ The script does require some interaction when it is running but it should be saf
 ### Post-Exploit
 
 - [BloodHound](https://github.com/BloodHoundAD/BloodHound)
-- [Girsh][https://github.com/nodauf/Girsh]
+- [Girsh](https://github.com/nodauf/Girsh)
 - [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)
 - [linux-exploit-suggester-2](https://github.com/jondonas/linux-exploit-suggester-2)
 - [LinEnum](https://github.com/rebootuser/LinEnum)
