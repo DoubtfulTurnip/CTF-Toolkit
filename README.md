@@ -1,4 +1,4 @@
-![Logo](DTLogo.png?raw=true)
+![Logo](https://github.com/DoubtfulTurnip/DTTermTheme/blob/main/Screenshots/DTLogo.png?raw=true)
 
 # CTFtoolkit
 
