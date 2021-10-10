@@ -74,7 +74,7 @@ The script does require some interaction when it is running but it should be saf
 - [sqlmap](https://github.com/sqlmapproject/sqlmap)
 - [Veil](https://github.com/Veil-Framework/Veil)
 - [wildpwn](https://github.com/localh0t/wildpwn)
-- Xexee-TopAntivirusEvasion(https://github.com/persianhydra/Xeexe-TopAntivirusEvasion)
+- [Xexee-TopAntivirusEvasion](https://github.com/persianhydra/Xeexe-TopAntivirusEvasion)
 - [OWT](https://github.com/clu3bot/OWT)
 - [XSStrike][https://github.com/s0md3v/XSStrike]
 
