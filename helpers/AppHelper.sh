@@ -83,6 +83,7 @@ Crypto and Cracking
 - haiti
 - hashcat
 - hash-identifier
+- hashpump
 - hate_crack
 - hydra
 - jwt-cracker
@@ -97,6 +98,7 @@ Crypto and Cracking
 - wordlistctl
 - x0r
 - xor-decrypt
+- zydra
 =======
 =======
 
@@ -114,6 +116,9 @@ Exploit
 - sqlmap
 - veil
 - wildpwn
+- xexee
+- owt
+- xsstrike
 =======
 =======
 

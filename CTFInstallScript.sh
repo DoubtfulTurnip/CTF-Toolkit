@@ -95,6 +95,9 @@ pip3 install fuzza -U -q --log pipinstall.log
 pip3 install libssl-dev -U -q --log pipinstall.log
 pip3 install swig -U -q --log pipinstall.log
 pip3 install s3scanner -U -q --log pipinstall.log
+pip3 install tld -U -q --log pipinstall.log
+pip3 install fuzzywuzzy -U -q --log pipinstall.log
+
 
 # From Git
 
@@ -113,7 +116,7 @@ echo "Installing HashPump" | tee -a ./install.log
 echo ""
 git clone https://github.com/bwall/HashPump.git $crypto/hashpump/ 1>/dev/null 2>> ./install.log
 cd $crypto/hashpump 1>/dev/null 2>> ./install.log
-sudo make 1>/dev/null 2>> ./install.log
+make 1>/dev/null 2>> ./install.log
 sudo make install 1>/dev/null 2>> ./install.log
 
 echo "Installing hate_crack" | tee -a ./install.log
@@ -135,7 +138,6 @@ git clone https://github.com/sc0tfree/mentalist.git $crypto/mentalist/ 1>/dev/nu
 cd $crypto/mentalist/
 sudo python3 setup.py install
 
-
 echo "Installing wordlistctl" | tee -a ./install.log
 echo ""
 git clone https://github.com/BlackArch/wordlistctl $crypto/wordlistctl/ 1>/dev/null 2>> ./install.log
@@ -144,10 +146,6 @@ echo "Installing Zydra" | tee -a ./install.log
 echo ""
 git clone https://github.com/hamedA2/Zydra.git $crypto/Zydra/ 1>/dev/null 2>> ./install.log
 sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf 1>/dev/null 2>> ./install.log
-
-#echo "Installing NoMoreXOR" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/hiddenillusion/NoMoreXOR.git $crypto/NoMoreXOR/ 1>/dev/null 2>> ./install.log
 
 echo "Installing rsatool" | tee -a ./install.log
 echo ""
@@ -162,10 +160,6 @@ echo "Installing xor-decrypt" | tee -a ./install.log
 echo ""
 git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ 1>/dev/null 2>> ./install.log
 
-#XORMULTILINEFILE SCRIPT INSTALL!
-
-
-
 
 
 
@@ -173,22 +167,22 @@ git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ 1
 
 
 
-#echo "Installing chimera" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/tokyoneon/chimera.git $exploit/chimera/ 1>/dev/null 2>> ./install.log
-#chown $USER:$USER -R $exploit/chimera 1>/dev/null 2>> ./install.log
-#chmod +x $exploit/chimera/chimera.sh 1>/dev/null 2>> ./install.log
+echo "Installing chimera" | tee -a ./install.log
+echo ""
+git clone https://github.com/tokyoneon/chimera.git $exploit/chimera/ 1>/dev/null 2>> ./install.log
+chown $USER:$USER -R $exploit/chimera 1>/dev/null 2>> ./install.log
+chmod +x $exploit/chimera/chimera.sh 1>/dev/null 2>> ./install.log
 
 echo "Installing wildpwn" | tee -a ./install.log
 echo ""
 git clone https://github.com/localh0t/wildpwn.git $exploit/wildpwn/ 1>/dev/null 2>> ./install.log
 
-#echo "Installing Xeexe" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/persianhydra/Xeexe-TopAntivirusEvasion.git $exploit/Xeexe-TopAntivirusEvasion/ 1>/dev/null 2>> ./install.log
-#cd $exploit/Xeexe-TopAntivirusEvasion 1>/dev/null 2>> ./install.log
-#chmod +x install.sh && ./install.sh 1>/dev/null 2>> ./install.log
-#chmod +x $exploit/Xeexe-TopAntivirusEvasion/Xeexe.py 1>/dev/null 2>> ./install.log
+echo "Installing Xeexe" | tee -a ./install.log
+echo ""
+git clone https://github.com/persianhydra/Xeexe-TopAntivirusEvasion.git $exploit/Xeexe-TopAntivirusEvasion/ 1>/dev/null 2>> ./install.log
+cd $exploit/Xeexe-TopAntivirusEvasion 1>/dev/null 2>> ./install.log
+chmod +x install.sh && ./install.sh 1>/dev/null 2>> ./install.log
+chmod +x $exploit/Xeexe-TopAntivirusEvasion/Xeexe.py 1>/dev/null 2>> ./install.log
 
 echo "Installing DKMC" | tee -a ./install.log
 echo ""
@@ -201,19 +195,20 @@ echo ""
 git clone https://github.com/rek7/fireELF.git $exploit/fireELF/ 1>/dev/null 2>> ./install.log
 pip3 install -r $exploit/firreELF/dep.txt 1>/dev/null 2>> ./install.log
 
-#echo "Installing OWT" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/clu3bot/OWT.git $exploit/OWT/ 1>/dev/null 2>> ./install.log
+echo "Installing OWT" | tee -a ./install.log
+echo ""
+git clone https://github.com/clu3bot/OWT.git $exploit/OWT/ 1>/dev/null 2>> ./install.log
+cd $exploit/OWT/
+chmod +x owt.sh
 
 echo "Installing Seth" | tee -a ./install.log
 echo ""
 git clone https://github.com/SySS-Research/Seth.git $exploit/Seth/ 1>/dev/null 2>> ./install.log
 
-#echo "Installing XSStrike" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStirke/ 1>/dev/null 2>> ./install.log
-#cd $exploit/XSStrike 1>/dev/null 2>> ./install.log
-#pip3 install -r requirements.txt 1>/dev/null 2>> ./install.log
+echo "Installing XSStrike" | tee -a ./install.log
+echo ""
+git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStrike/ 1>/dev/null 2>> ./install.log
+
 
 
 

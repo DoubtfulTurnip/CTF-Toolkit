@@ -11,22 +11,22 @@ alias pnwgen='cd ~/apps/cryptoandcracking/pnwgen/ && python3 pnwgen.py'
 alias rsactftool='python3 ~/apps/cryptoandcracking/RsaCtfTool/RsaCtfTool.py'
 alias wordlistctl='python3 ~/apps/cryptoandcracking/wordlistctl/wordlistctl.py'
 alias zydra='python3 ~/apps/cryptoandcracking/Zydra/Zydra.py'
-alias nomorexor='python ~/apps/cryptoandcracking/NoMoreXOR/NoMoreXOR.py'
 alias rsatool='python3 ~/apps/cryptoandcracking/rsatool/rsatool.py'
 alias x0r='python ~/apps/cryptoandcracking/X0R/X0R.py'
 alias xor-decrypt='python3 ~/apps/cryptoandcracking/xor-decrypt/xor-decrypt.py'
-alias XOR-MultilineFiledir='~/apps/cryptoandcracking/XOR-MultilineFile'
+
 
 # Exploit alias
 alias avet='cd ~/apps/exploit/avet/ && python3 avet.py'
-alias chimera='bash ~/apps/exploit/Chimera/chimera.sh'
+alias chimera='bash ~/apps/exploit/chimera/chimera.sh'
 alias wildpwn='python ~/apps/exploit/wildpwn/wildpwn.py'
-alias xeexee='python3 ~/apps/exploit/xeexee/Xeexe.py'
+alias xeexe='python3 ~/apps/exploit/Xeexe-TopAntivirusEvasion/Xeexe.py'
 alias dkmc='python ~/apps/exploit/DKMC/dkmc.py'
 alias fireelf='python3 ~/apps/exploit/fireELF/main.py'
 alias owt='bash ~/apps/exploit/owt/owt.sh'
 alias seth='python3 ~/apps/exploit/Seth/seth.py'
 alias xsstrike='python3 ~/apps/exploit/XSStrike/xsstrike.py'
+
 
 #Post-Exploit alias
 alias girsh='cd ~/apps/post-exploit/Girsh/src/ && go run main.go'
