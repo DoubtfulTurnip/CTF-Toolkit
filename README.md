@@ -132,7 +132,7 @@ Note: The docker containers have not yet been implemented (next on the to do lis
 
 
 
-### OSINT
+### OSint
 
 - [gitgraber](https://github.com/hisxo/gitGraber)
 - [sherlock](https://github.com/sherlock-project/sherlock)
