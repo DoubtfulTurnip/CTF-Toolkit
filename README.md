@@ -28,10 +28,10 @@ cd ctftoolkit
 chmod +x CTFInstallScript.sh
 ```
 
-- Run the install script (requires sudo)
+- Run the install script (run as user but will ask for sudo password)
 
 ```
-sudo ./CTFInstallScript.sh
+./CTFInstallScript.sh
 ```
 
 The script does require some interaction when it is running but it should be safe to just accept any defaults 
