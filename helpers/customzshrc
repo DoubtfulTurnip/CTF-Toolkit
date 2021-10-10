@@ -2,11 +2,10 @@
 alias apphelp='bash ~/apps/AppHelper.sh'
 
 # Crypto and Cracking Tool alias
-alias ctfbreakrsa='python3 ~/apps/cryptoandcracking/ctf_break_rsa/fac_n.py'
-alias duplicut='~/apps/cryptoandcracking/duplicut/duplicut'
 alias bopscrk='cd ~/apps/cryptoandcracking/bopscrk && python3 bopscrk.py'
-alias hatch='python3 ~/apps/cryptoandcracking/hatch/main.py'
+alias duplicut='~/apps/cryptoandcracking/duplicut/duplicut'
 alias hate_crack='python ~/apps/cryptoandcracking/hate_crack/hate_crack.py'
+alias hatch='python3 ~/apps/cryptoandcracking/hatch/main.py'
 alias pnwgen='cd ~/apps/cryptoandcracking/pnwgen/ && python3 pnwgen.py'
 alias rsactftool='python3 ~/apps/cryptoandcracking/RsaCtfTool/RsaCtfTool.py'
 alias wordlistctl='python3 ~/apps/cryptoandcracking/wordlistctl/wordlistctl.py'
@@ -46,19 +45,17 @@ alias depix='python3 ~/apps/forensics/Depix/depix.py'
 alias peepdf='python ~/apps/forensics/peepdf/peepdf.py'
 alias ssh_decoder='ruby ~/apps/forensics/ssh_decoder/ssh_decoder.rb'
 alias stegsolve='java -jar ~/apps/forensics/stegsolve/stegsolve.jar'
-alias volatility='python3 ~apps/forensics/volatility3/vol.py'
 
 #Mobile alias
 
-
 #OSINT alias
-alias ghunt='python3 ~/apps/osint/GHunt/hunt.py'
+alias ghunt='python3 ~/apps/osint/GHunt/ghunt.py'
 alias gitgraberdir='cd ~/apps/osint/gitGraber/'
 alias cardpwn='python3 ~/apps/osint/CardPwn/cardpwn.py'
 alias sif='python3 ~/apps/osint/SocialintFramework/main.py'
 alias shodansploit='python ~/apps/osint/shodansploit/shodansploit.py'
 alias scavenger='python3 ~/apps/osint/Scavenger/scavenger.py'
-alias spiderfoot='cd ~/apps/osint/spiderfoot/'
+
 
 # Reversing and Binary Exploit alias
 alias overflowhelper='python ~/apps/reversingandbinaryexploit/Overflow-Helper/BofHelper.py'

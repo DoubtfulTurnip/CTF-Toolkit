@@ -20,6 +20,7 @@ echo "Copying Helpers" | tee -a ./install.log
 echo ""
 cp helpers/* ~/apps 1>/dev/null 2>> ./install.log
 
+
 # Script Variables
 crypto=~/apps/cryptoandcracking
 exploit=~/apps/exploit
@@ -54,8 +55,6 @@ sudo apt-get update 1>/dev/null 2>> ./install.log
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io 1>/dev/null 2>> ./install.log
 
 
-
-
 # Path variables
 echo "Configuring Paths" | tee -a ./install.log
 echo ""
@@ -65,16 +64,18 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
 
+
 # From npm
-echo "Installing npm" | tee -a ./install.log
+echo "Installing npm" | tee -a ./npminstall.log
 echo ""
-sudo npm install --global jwt-cracker 1>/dev/null 2>> ./install.log
+sudo npm install --global jwt-cracker 1>/dev/null 2>> ./npminstall.log
 
 # From Gem
-echo "Installing Tools With gem" | tee -a ./install.log
+echo "Installing Tools With gem" | tee -a ./geminstall.log
 echo ""
-sudo gem install haiti-hash -q 1>/dev/null 2>> ./install.log
-sudo gem install evil-winrm -q 1>/dev/null 2>> ./install.log
+sudo gem install haiti-hash -q 1>/dev/null 2>> ./geminstall.log
+sudo gem install evil-winrm -q 1>/dev/null 2>> ./geminstall.log
+
 
 #Python Required Modules/Apps
 pip3 install selenium -U -q --log pipinstall.log
@@ -99,18 +100,22 @@ pip3 install tld -U -q --log pipinstall.log
 pip3 install fuzzywuzzy -U -q --log pipinstall.log
 
 
+
+
 # From Git
 
+
 #cryptoandcracking
-echo "Installing duplicut" | tee -a ./install.log
-echo ""
-git clone https://github.com/nil0x42/duplicut.git $crypto/duplicut/ 1>/dev/null 2>> ./install.log
-cd $crypto/duplicut/ && make 1>/dev/null 2>> ./install.log
 
 echo "Installing bopscrk" | tee -a ./install.log
 echo ""
 git clone https://github.com/r3nt0n/bopscrk.git $crypto/bopscrk/ 1>/dev/null 2>> ./install.log
 pip install -r $crypto/bopscrk/requirements.txt 1>/dev/null 2>> ./install.log
+
+echo "Installing duplicut" | tee -a ./install.log
+echo ""
+git clone https://github.com/nil0x42/duplicut.git $crypto/duplicut/ 1>/dev/null 2>> ./install.log
+cd $crypto/duplicut/ && make 1>/dev/null 2>> ./install.log
 
 echo "Installing HashPump" | tee -a ./install.log
 echo ""
@@ -162,10 +167,7 @@ git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ 1
 
 
 
-
 #exploit
-
-
 
 echo "Installing chimera" | tee -a ./install.log
 echo ""
@@ -211,12 +213,8 @@ git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStrike/ 1>/dev/null 
 
 
 
-
-
-
-
-
 #post-exploit
+
 echo "Installing Girsh" | tee -a ./install.log
 echo ""
 git clone https://github.com/nodauf/Girsh.git $postexploit/Girsh/ 1>/dev/null 2>> ./install.log
@@ -235,9 +233,9 @@ echo "Installing LinEnum" | tee -a ./install.log
 echo ""
 git clone https://github.com/rebootuser/LinEnum.git $postexploit/LinEnum/ 1>/dev/null 2>> ./install.log
 
-#echo "Installing PEASS-ng" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/carlospolop/PEASS-ng.git $postexploit/PEASS-ng/ 1>/dev/null 2>> ./install.log
+echo "Installing PEASS-ng" | tee -a ./install.log
+echo ""
+git clone https://github.com/carlospolop/PEASS-ng.git $postexploit/PEASS-ng/ 1>/dev/null 2>> ./install.log
 
 echo "Installing Powerless" | tee -a ./install.log
 echo ""
@@ -253,19 +251,17 @@ git clone https://github.com/melnicek/peh.git $postexploit/peh/ 1>/dev/null 2>> 
 
 
 
-
-
-
 #forensic
-#echo "Installing AudioStego" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/danielcardeenas/AudioStego.git $forensics/AudioStego/ 1>/dev/null 2>> ./install.log
-#cd $forensics/AudioStego 1>/dev/null 2>> ./install.log
-#mkdir build 1>/dev/null 2>> ./install.log
-#cd build 1>/dev/null 2>> ./install.log
-#cmake .. 1>/dev/null 2>> ./install.log
-#make 1>/dev/null 2>> ./install.log
-#ln -s $forensics/AudioStego/hideme ~/bin/audiostego 1>/dev/null 2>> ./install.log
+
+echo "Installing AudioStego" | tee -a ./install.log
+echo ""
+git clone https://github.com/danielcardeenas/AudioStego.git $forensics/AudioStego/ 1>/dev/null 2>> ./install.log
+cd $forensics/AudioStego 1>/dev/null 2>> ./install.log
+mkdir build 1>/dev/null 2>> ./install.log
+cd build 1>/dev/null 2>> ./install.log
+cmake .. 1>/dev/null 2>> ./install.log
+make 1>/dev/null 2>> ./install.log
+ln -s $forensics/AudioStego/build/hideme ~/bin/audiostego 1>/dev/null 2>> ./install.log
 
 echo "Installing autoVolatility" | tee -a ./install.log
 echo ""
@@ -300,27 +296,19 @@ tar zxvf Image-ExifTool-12.tar.gz 1>/dev/null 2>> ./install.log
 ln -s $forensics/Exiftool/Image-ExifTool-12.30/exiftool ~/bin/exiftool 1>/dev/null 2>> ./install.log
 rm $forensics/Exiftool/Image-ExifTool-12.30.tar.gz 1>/dev/null 2>> ./install.log
 
-#echo "Installing volatility3" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/volatilityfoundation/volatility3.git $forensics/volatility3/ 1>/dev/null 2>> ./install.log
-
-
-
-
 
 
 #mobile
 
 
 
-
-
-
-
 #osint
-#echo "Installing Ghunt" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/mxrch/Ghunt.git $osint/Ghunt/ 1>/dev/null 2>> ./install.log
+
+echo "Installing Ghunt" | tee -a ./install.log
+echo ""
+git clone https://github.com/mxrch/Ghunt.git $osint/Ghunt/ 1>/dev/null 2>> ./install.log
+cd $osint/Ghunt/
+python3 -m pip3 install -r requirements.txt
 
 echo "Installing gitGraber" | tee -a ./install.log
 echo ""
@@ -344,32 +332,16 @@ echo "Installing Scavenger" | tee -a ./install.log
 echo ""
 git clone https://github.com/rndinfosecguy/Scavenger.git $osint/Scavenger/ 1>/dev/null 2>> ./install.log
 
-echo "Installing spiderfoot" | tee -a ./install.log
+echo "Installing gitjacker" | tee -a ./install.log
 echo ""
-mkdir $osint/spiderfoot 1>/dev/null 2>> ./install.log
-wget https://github.com/smicallef/spiderfoot/archive/v3.4.tar.gz $osin/spiderfoot 1>/dev/null 2>> ./install.log
-$osint/spiderfoot/tar zxvf v3.4.tar.gz 1>/dev/null 2>> ./install.log
-cd $osint/spiderfoot/ 1>/dev/null 2>> ./install.log
-pip3 install -r requeriments.txt 1>/dev/null 2>> ./install.log
-
-#echo "Installing gitjacker" | tee -a ./install.log
-#echo ""
-#mkdir $osint/gitjacker/ 1>/dev/null 2>> ./install.log
-#cd $osint/gitjacker/ 1>/dev/null 2>> ./install.log
-#curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash 1>/dev/null 2>> ./install.log
-
-echo "Installing yar" | tee -a ./install.log
-echo ""
-mkdir $osint/yar/ 1>/dev/null 2>> ./install.log
-cd $osint/yar 1>/dev/null 2>> ./install.log
-go get github.com/nielsing/yar 1>/dev/null 2>> ./install.log
-
-
-
+mkdir $osint/gitjacker/ 1>/dev/null 2>> ./install.log
+cd $osint/gitjacker/ 1>/dev/null 2>> ./install.log
+curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/install.sh" | bash 1>/dev/null 2>> ./install.log
 
 
 
 #reversing and binary exploitation
+
 echo "Installing Overflow-Helper" | tee -a ./install.log
 echo ""
 git clone https://github.com/LegendBegins/Overflow-Helper.git $revbin/Overflow-Helper/ 1>/dev/null 2>> ./install.log
@@ -387,20 +359,11 @@ python3 setup.py install
 
 
 
-
-
 #scanning and recon
-#echo "Installing AutoRecon" | tee -a ./install.log
-#echo ""
-#git clone https://github.com/Tib3rius/AutoRecon.git $scanrec/AutoRecon/ 1>/dev/null 2>> ./install.log
-#cd $scanrec/AutoRecon 1>/dev/null 2>> ./install.log
-#pip3 install -r requirements.txt 1>/dev/null 2>> ./install.log
 
-
-
-
-
-
+echo "Installing AutoRecon" | tee -a ./install.log
+echo ""
+sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git 1>/dev/null 2>> ./pipinstall.log
 
 
 
