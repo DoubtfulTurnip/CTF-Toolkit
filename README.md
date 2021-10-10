@@ -44,7 +44,7 @@ Once the installation is complete, close/restart the terminal to allow the alias
 ```
 apphelp
 ```
-Note: The docker containers have not yet been implemented (next on the list to do) but option 12 lists all the available tools and the commands to start them
+Note: The docker containers have not yet been implemented (next on the to do list) but option 12 lists all the available tools and the commands to start them
 
 
 ## Tools included ##
