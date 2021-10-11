@@ -166,15 +166,27 @@ echo -e ""
 
 echo -e "${PURPLE}Installing bopscrk${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/r3nt0n/bopscrk.git $crypto/bopscrk/ 1>/dev/null 2>> $install
 pip install -r $crypto/bopscrk/requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing duplicut${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/nil0x42/duplicut.git $crypto/duplicut/ 1>/dev/null 2>> $install
 cd $crypto/duplicut/ && make 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing HashPump${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/bwall/HashPump.git $crypto/hashpump/ 1>/dev/null 2>> $install
 cd $crypto/hashpump 1>/dev/null 2>> $install
@@ -183,18 +195,34 @@ sudo make install 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing hate_crack${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/trustedsec/hate_crack.git $crypto/hate_crack/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing pwngen${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/toxydose/pnwgen.git $crypto/pnwgen/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing RsaCtfTool${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/Ganapati/RsaCtfTool.git $crypto/RsaCtfTool/ 1>/dev/null 2>> $install
 pip3 install -r $crypto/RsaCtfTool/requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Mentalist${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/sc0tfree/mentalist.git $crypto/mentalist/ 1>/dev/null 2>> $install
 cd $crypto/mentalist/
@@ -202,23 +230,43 @@ sudo python3 setup.py install
 
 echo -e "${PURPLE}Installing wordlistctl${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/BlackArch/wordlistctl $crypto/wordlistctl/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Zydra${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/hamedA2/Zydra.git $crypto/Zydra/ 1>/dev/null 2>> $install
 sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing rsatool${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/ius/rsatool.git $crypto/rsatool/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing X0R${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/X-Vector/X0R.git $crypto/X0R/ 1>/dev/null 2>> $install
 pip install -r $crypto/X0R/requirement.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing xor-decrypt${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ 1>/dev/null 2>> $install
 
@@ -228,15 +276,27 @@ git clone https://github.com/AlexFSmirnov/xor-decrypt.git $crypto/xor-decrypt/ 1
 
 echo -e "${PURPLE}Installing chimera${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/tokyoneon/chimera.git $exploit/chimera/ 1>/dev/null 2>> $install
 chown $USER:$USER -R $exploit/chimera 1>/dev/null 2>> $install
 chmod +x $exploit/chimera/chimera.sh 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing wildpwn${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/localh0t/wildpwn.git $exploit/wildpwn/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Xeexe${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/persianhydra/Xeexe-TopAntivirusEvasion.git $exploit/Xeexe-TopAntivirusEvasion/ 1>/dev/null 2>> $install
 cd $exploit/Xeexe-TopAntivirusEvasion 1>/dev/null 2>> $install
@@ -245,16 +305,28 @@ chmod +x $exploit/Xeexe-TopAntivirusEvasion/Xeexe.py 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing DKMC${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/Mr-Un1k0d3r/DKMC.git $exploit/DKMC/ 1>/dev/null 2>> $install
 cd $exploit/DKMC 1>/dev/null 2>> $install
 mkdir output 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing fireELF${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/rek7/fireELF.git $exploit/fireELF/ 1>/dev/null 2>> $install
 pip3 install -r $exploit/firreELF/dep.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing OWT${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/clu3bot/OWT.git $exploit/OWT/ 1>/dev/null 2>> $install
 cd $exploit/OWT/
@@ -262,9 +334,17 @@ chmod +x owt.sh
 
 echo -e "${PURPLE}Installing Seth${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/SySS-Research/Seth.git $exploit/Seth/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing XSStrike${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStrike/ 1>/dev/null 2>> $install
 
@@ -274,9 +354,17 @@ git clone https://github.com/s0md3v/XSStrike.git $exploit/XSStrike/ 1>/dev/null 
 
 echo -e "${PURPLE}Installing Girsh${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/nodauf/Girsh.git $postexploit/Girsh/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing enum4linux${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/cddmp/enum4linux-ng $postexploit/enum4linux-ng/ 1>/dev/null 2>> $install
 cd $postexploit/enum4linux-ng/ 1>/dev/null 2>> $install
@@ -284,25 +372,49 @@ pip3 install -r requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing linux-exploit-suggester-2${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/jondonas/linux-exploit-suggester-2.git $postexploit/linux-exploit-suggester-2/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing LinEnum${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/rebootuser/LinEnum.git $postexploit/LinEnum/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing PEASS-ng${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/carlospolop/PEASS-ng.git $postexploit/PEASS-ng/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Powerless${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/gladiatx0r/Powerless.git $postexploit/Powerless/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing PrivescCheck${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/itm4n/PrivescCheck.git $postexploit/PrivescCheck/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}nstalling peh${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/melnicek/peh.git $postexploit/peh/ 1>/dev/null 2>> $install
 
@@ -311,6 +423,10 @@ git clone https://github.com/melnicek/peh.git $postexploit/peh/ 1>/dev/null 2>> 
 #forensic
 
 echo -e "${PURPLE}Installing AudioStego${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/danielcardeenas/AudioStego.git $forensics/AudioStego/ 1>/dev/null 2>> $install
 cd $forensics/AudioStego 1>/dev/null 2>> $install
@@ -322,15 +438,27 @@ ln -s $forensics/AudioStego/build/hideme ~/bin/audiostego 1>/dev/null 2>> $insta
 
 echo -e "${PURPLE}Installing autoVolatility${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/carlospolop/autoVolatility.git $forensics/autoVolatility/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Depix${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/beurtschipper/Depix.git $forensics/Depix/ 1>/dev/null 2>> $install
 cd $forensics/Depix/ 1>/dev/null 2>> $install
 pip3 install -r requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing peepdf${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/jesparza/peepdf.git $forensics/peepdf/ 1>/dev/null 2>> $install
 
@@ -340,11 +468,19 @@ git clone https://github.com/jjyg/ssh_decoder.git $forensics/ssh_decoder/ 1>/dev
 
 echo -e "${PURPLE}Installing stegsolve${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 mkdir $forensics/stegsolve 1>/dev/null 2>> $install
 wget http://www.caesum.com/handbook/Stegsolve.jar -O $forensics/stegsolve/stegsolve.jar 1>/dev/null 2>> $install
 chmod +x $forensics/stegsolve/stegsolve.jar 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Exiftool${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 mkdir $forensics/Exiftool 1>/dev/null 2>> $install
 wget https://exiftool.org/Image-ExifTool-12.30.tar.gz -O $forensics/Exiftool/ 1>/dev/null 2>> $install
@@ -363,11 +499,19 @@ rm $forensics/Exiftool/Image-ExifTool-12.30.tar.gz 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Ghunt${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/mxrch/Ghunt.git $osint/Ghunt/ 1>/dev/null 2>> $install
 cd $osint/Ghunt/
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing gitGraber${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/hisxo/gitGraber.git $osint/gitGraber/ 1>/dev/null 2>> $install
 cd $osint/gitGraber/ 1>/dev/null 2>> $install
@@ -375,11 +519,19 @@ pip3 install -r requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing CardPwn${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/itsmehacker/CardPwn.git $osint/CardPwn/ 1>/dev/null 2>> $install
 cd $osint/CardPwn/ 1>/dev/null 2>> $install
 pip3 install -r requirements.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing SocialintFramework${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/Pyshios/SocialintFramework.git $osint/SocialintFramework 1>/dev/null 2>> $install
 cd $osint/SocialintFramework/ 1>/dev/null 2>> $install
@@ -387,9 +539,17 @@ pip3 install -r requeriments.txt 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing Scavenger${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/rndinfosecguy/Scavenger.git $osint/Scavenger/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing gitjacker${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 mkdir $osint/gitjacker/ 1>/dev/null 2>> $install
 cd $osint/gitjacker/ 1>/dev/null 2>> $install
@@ -401,13 +561,25 @@ curl -s "https://raw.githubusercontent.com/liamg/gitjacker/master/scripts/instal
 
 echo -e "${PURPLE}Installing Overflow-Helper${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/LegendBegins/Overflow-Helper.git $revbin/Overflow-Helper/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing ropstar${NC}" | tee -a $install
 echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 git clone https://github.com/xct/ropstar.git $revbin/ropstar/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing peframe${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/guelfoweb/peframe.git $revbin/peframe/ 1>/dev/null 2>> $install
 cd $revbin/peframe 1>/dev/null 2>> $install
@@ -420,7 +592,10 @@ sudo python3 setup.py install
 
 echo -e "${PURPLE}Installing AutoRecon${NC}" | tee -a $install
 echo -e ""
-sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
+echo -e ""
+echo -e ""
+echo -e ""
+sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git 1>/dev/null 2>> $install
 
 
 
@@ -451,7 +626,7 @@ sudo docker create -p 8000:8000 -p 9000:9000 --name portainer \
     --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
-    portainer/portainer-ce:latest $dockerinstall
+    portainer/portainer-ce:latest 1>/dev/null 2>> $dockerinstall
 echo -e "${RED}To start Portainer use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
 echo -e "${RED}${BOLD}Once started you will need to ensure that you have created an admin account on first use!${NORM}${NC}" | tee -a $dockerinstall
 echo -e ""
