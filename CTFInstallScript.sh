@@ -26,7 +26,7 @@ install=~/apps/logs/install.log
 npminstall=~/apps/logs/geminstall.log
 geminstall==~/apps/logs/geminstall.log
 dockerinstall=~/apps/logs/dockerinstall.log
-pipinstall=~/apps/logs/dockerinstall.log
+pipinstall=~/apps/logs/pipinstall.log
 
 #helpers
 echo "Copying Helpers" | tee -a $install
@@ -378,7 +378,7 @@ sudo python3 setup.py install
 
 echo "Installing AutoRecon" | tee -a $install
 echo ""
-sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git 1>/dev/null 2>> ./$pipinstall
+sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 
 
 
@@ -404,8 +404,8 @@ done
 echo "Installing docker containers" | tee -a $dockerinstall
 echo ""
 echo "Creating Portainer" | tee -a $dockerinstall
-sudo docker volume create portainer_data $dockerinstall
-docker create -p 8000:8000 -p 9000:9000 --name portainer \
+sudo docker volume create portainer_data
+sudo docker create -p 8000:8000 -p 9000:9000 --name portainer \
     --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
