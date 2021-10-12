@@ -104,6 +104,7 @@ echo -e ""
 sudo npm install --global jwt-cracker 1>/dev/null 2>> $npminstall
 
 # From Gem
+touch $geminstall
 echo -e "${GREEN}Installing Tools With gem${NC}" | tee -a $geminstall
 echo -e ""
 sudo gem install haiti-hash -q 1>/dev/null 2>> $geminstall
