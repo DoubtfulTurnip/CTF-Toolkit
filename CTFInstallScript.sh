@@ -16,12 +16,6 @@ echo -e ""
 echo -e ""
 echo -e "${GREEN}Creating Folders${NC}" 
 echo -e ""
-echo -e ""
-echo -e ""
-echo -e ""
-echo -e ""
-echo -e ""
-echo -e ""
 mkdir ~/apps 
 mkdir ~/apps/blueteam
 mkdir ~/apps/cryptoandcracking 
@@ -38,13 +32,8 @@ echo -e ""
 echo -e ""
 echo -e ""
 # Log variables
-echo -e ""
-echo -e ""
-echo -e ""
-echo -e ""
-echo -e ""
 install=~/apps/logs/install.log
-npminstall=~/apps/logs/geminstall.log
+npminstall=~/apps/logs/npminstall.log
 geminstall==~/apps/logs/geminstall.log
 dockerinstall=~/apps/logs/dockerinstall.log
 pipinstall=~/apps/logs/pipinstall.log
@@ -226,7 +215,7 @@ echo -e ""
 echo -e ""
 git clone https://github.com/sc0tfree/mentalist.git $crypto/mentalist/ 1>/dev/null 2>> $install
 cd $crypto/mentalist/
-sudo python3 setup.py install
+sudo python3 setup.py install 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing wordlistctl${NC}" | tee -a $install
 echo -e ""
@@ -410,7 +399,7 @@ echo -e ""
 echo -e ""
 git clone https://github.com/itm4n/PrivescCheck.git $postexploit/PrivescCheck/ 1>/dev/null 2>> $install
 
-echo -e "${PURPLE}nstalling peh${NC}" | tee -a $install
+echo -e "${PURPLE}Installing peh${NC}" | tee -a $install
 echo -e ""
 echo -e ""
 echo -e ""
@@ -463,6 +452,11 @@ echo -e ""
 git clone https://github.com/jesparza/peepdf.git $forensics/peepdf/ 1>/dev/null 2>> $install
 
 echo -e "${PURPLE}Installing ssh_decoder${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e ""
 git clone https://github.com/jjyg/ssh_decoder.git $forensics/ssh_decoder/ 1>/dev/null 2>> $install
 
@@ -585,7 +579,11 @@ git clone https://github.com/guelfoweb/peframe.git $revbin/peframe/ 1>/dev/null 
 cd $revbin/peframe 1>/dev/null 2>> $install
 sudo bash install.sh
 sudo python3 setup.py install
-
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
+echo -e ""
 
 
 #scanning and recon
@@ -621,13 +619,13 @@ done
 echo -e "${BLUE}Installing docker containers${NC}" | tee -a $dockerinstall
 echo -e ""
 echo -e "${BLUE}Creating Portainer${NC}" | tee -a $dockerinstall
-sudo docker volume create portainer_data
+sudo docker volume create portainer_data &1>/dev/null
 sudo docker create -p 8000:8000 -p 9000:9000 --name portainer \
     --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     portainer/portainer-ce:latest 1>/dev/null 2>> $dockerinstall
-echo -e "${RED}To start Portainer use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
+echo -e "${RED}To start Portainer use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e "${RED}${BOLD}Once started you will need to ensure that you have created an admin account on first use!${NORM}${NC}" | tee -a $dockerinstall
 echo -e ""
 
@@ -637,7 +635,7 @@ git clone https://github.com/smicallef/spiderfoot $osint/spiderfoot/ 1>/dev/null
 cd $osint/spiderfoot
 sudo docker build -t spiderfoot . 1>/dev/null 2>> $dockerinstall
 sudo docker create --name spiderfoot -p 5009:5001 -d spiderfoot 1>/dev/null 2>> $dockerinstall
-echo -e "${RED}To start Spiderfoot use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
+echo -e "${RED}To start Spiderfoot use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e ""
 
 
@@ -646,7 +644,7 @@ git clone https://github.com/cyberdefenders/email-header-analyzer $blueteam/emai
 cd $blueteam/email-header-analyzer/
 sudo docker build -t mha:latest . 1>/dev/null 2>> $dockerinstall
 sudo docker create --name mail-header-analyzer -p 8080:8080 mha:latest 1>/dev/null 2>> $dockerinstall
-echo -e "${RED}To start Email-Header-Analyzer use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
+echo -e "${RED}To start Email-Header-Analyzer use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e ""
 
 
@@ -657,7 +655,7 @@ sudo docker network create -d bridge haknet 1>/dev/null 2>> $dockerinstall
 sudo docker create --network haknet --name msfdb -e POSTGRES_PASSWORD=s3cr3t -d postgres 1>/dev/null 2>> $dockerinstall
 sudo docker build -t autosploit . 1>/dev/null 2>> $dockerinstall
 sudo docker create --name autosploit --network haknet -p 2000:80 -p 2001:443 -p 4444:4444 autosploit 1>/dev/null 2>> $dockerinstall
-echo -e "${RED}To start AutoSploit use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
+echo -e "${RED}To start AutoSploit use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e ""
 
 
@@ -670,7 +668,7 @@ echo -e ""
 
 echo -e "${BLUE}Creating Juicshop${NC}" | tee -a $dockerinstall
 sudo docker create --name juiceshop -p 3000:3000 bkimminich/juice-shop 1>/dev/null 2>> $dockerinstall
-echo -e "${RED}To start Juiceshop use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
+echo -e "${RED}To start Juiceshop use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e ""
 
 
@@ -680,7 +678,7 @@ echo -e ""
 echo -e ""
 echo -e "${RED}Installation Complete${NC}" | tee -a $install
 echo -e "${RED}${BOLD}Restart your terminal for changes to take effect${NORM}${NC}"
-echo -e "${RED}Once you have done this run ${BOLD}apphelp${NORM} to start using the new tools${NC}"
+echo -e "${RED}Once you have done this run${NC} ${BOLD}apphelp${NORM} ${RED}to start using the newly installed tools${NC}"
 echo -e ""
 echo -e ""
 echo -e ""

@@ -1,6 +1,22 @@
 #!/bin/bash
 PS3='Choose your poison: '
-apps=("Start Portainer" "Start MHA Docker" "Stop MHA Docker" "Start Autosploit Docker" "Stop Autosploit Docker" "Start NoSQLMap Docker" "Start stego-toolkit Docker" "Start Juiceshop Docker" "Stop Juiceshop Docker" "Start Spiderfoot Docker" "Stop Spiderfoot Docker" "Update All Apps" "Print List of Tools" "Quit")
+apps=(
+    "Start Portainer" 
+    "Stop Portainer" 
+    "Start MHA Docker" 
+    "Stop MHA Docker" 
+    "Start Autosploit Docker" 
+    "Stop Autosploit Docker" 
+    "Start NoSQLMap Docker" 
+    "Start stego-toolkit Docker" 
+    "Start Juiceshop Docker" 
+    "Stop Juiceshop Docker" 
+    "Start Spiderfoot Docker" 
+    "Stop Spiderfoot Docker" 
+    "Update All Apps" 
+    "Print List of Tools" 
+    "Quit"
+    )
 select fav in "${apps[@]}"; do
     case $fav in
         "Start Portainer")
@@ -9,7 +25,7 @@ select fav in "${apps[@]}"; do
        break
             ;;
         "Stop Portainer")
-            echo "Start Portainer"
+            echo "Stop Portainer"
 	    sudo docker container stop portainer && echo "Portainer has been shut down"
        break
             ;;
