@@ -35,12 +35,11 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        echo "Start Portainer"
-	    $CALLBIGGAP && sudo docker container start portainer &1>/dev/null && $CALLBIGGAP && echo "Portainer should now be available on localhost:9000"
+        $CALLBIGGAP && sudo docker container start portainer &1>/dev/null && echo "Portainer should now be available on localhost:9000"
         portaineroptions
         ;;
     2)
-        $CALLBIGGAP && sudo docker container stop portainer &1>/dev/null && $CALLBIGGAP && echo "Portainer has been shut down"
+        $CALLBIGGAP && sudo docker container stop portainer &1>/dev/null && echo "Portainer has been shut down"
         portaineroptions
         ;;
     3)
