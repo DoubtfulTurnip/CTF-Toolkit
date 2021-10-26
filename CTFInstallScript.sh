@@ -14,7 +14,7 @@ NORM=$(tput sgr0)
 
 echo -e ""
 echo -e ""
-echo -e "${GREEN}Creating Folders${NC}" 
+echo -e "${GREEN}Creating Folders...${NC}" 
 echo -e ""
 mkdir ~/apps 
 mkdir ~/apps/blueteam
@@ -34,7 +34,7 @@ echo -e ""
 # Log variables
 install=~/apps/logs/install.log
 npminstall=~/apps/logs/npminstall.log
-geminstall==~/apps/logs/geminstall.log
+geminstall=~/apps/logs/geminstall.log
 dockerinstall=~/apps/logs/dockerinstall.log
 pipinstall=~/apps/logs/pipinstall.log
 echo -e ""
@@ -43,7 +43,7 @@ echo -e ""
 echo -e ""
 echo -e ""
 #helpers
-echo -e "${GREEN}Copying Helpers${NC}" | tee -a $install
+echo -e "${GREEN}Copying Helpers...${NC}" | tee -a $install
 echo -e ""
 cp helpers/* ~/apps 1>/dev/null 2>> $install
 echo -e ""
@@ -73,6 +73,7 @@ echo -e "${GREEN}Installing Docker${NC}" | tee -a $install
 echo -e ""
 sudo systemctl enable docker --now 1>/dev/null 2>> $install
 
+
 printf "%s\n" "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-ce-archive-keyring.gpg] https://download.docker.com/linux/debian buster stable" \
   | sudo tee /etc/apt/sources.list.d/docker-ce.list 1>/dev/null 2>> $install
   
@@ -83,6 +84,9 @@ curl -fsSL https://download.docker.com/linux/debian/gpg \
 sudo apt-get update 1>/dev/null 2>> $install
 
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io 1>/dev/null 2>> $install
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 echo -e ""
 echo -e ""
@@ -99,13 +103,13 @@ export PATH=~/.local/bin:$PATH
 
 
 # From npm
-echo -e "${GREEN}Installing npm${NC}" | tee -a $npminstall
+echo -e "${GREEN}Installing npm...${NC}" | tee -a $npminstall
 echo -e ""
 sudo npm install --global jwt-cracker 1>/dev/null 2>> $npminstall
 
 # From Gem
 touch $geminstall
-echo -e "${GREEN}Installing Tools With gem${NC}" | tee -a $geminstall
+echo -e "${GREEN}Installing Tools With gem...${NC}" | tee -a $geminstall
 echo -e ""
 sudo gem install haiti-hash -q 1>/dev/null 2>> $geminstall
 sudo gem install evil-winrm -q 1>/dev/null 2>> $geminstall
@@ -671,6 +675,13 @@ echo -e "${BLUE}Creating Juiceshop${NC}" | tee -a $dockerinstall
 sudo docker create --name juiceshop -p 3000:3000 bkimminich/juice-shop 1>/dev/null 2>> $dockerinstall
 echo -e "${RED}To start Juiceshop use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e ""
+
+
+echo -e "${BLUE}Creating Stego-toolkit${NC}" | tee -a $dockerinstall
+sudo docker pull dominicbreuker/stego-toolkit 1>/dev/null 2>> $dockerinstall
+echo -e "${RED}To start Stego-toolkit use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
+echo -e ""
+
 
 
 
