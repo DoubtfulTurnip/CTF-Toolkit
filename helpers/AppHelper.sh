@@ -5,11 +5,6 @@ ESC=$(printf '\033') RESET="${ESC}[0m" BLACK="${ESC}[30m" RED="${ESC}[31m"
 GREEN="${ESC}[32m" YELLOW="${ESC}[33m" BLUE="${ESC}[34m" MAGENTA="${ESC}[35m"
 CYAN="${ESC}[36m" WHITE="${ESC}[37m" DEFAULT="${ESC}[39m"
 
-### Spacing ##
-BIGGAP="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-CALLBIGGAP=echo -e $BIGGAP
-
-
 ### Color Functions ##
 
 greenprint() { printf "${GREEN}%s${RESET}\n" "$1"; }
@@ -34,13 +29,34 @@ $(redprint '0)') Exit
 Choose an option:  "
     read -r ans
     case $ans in
-    1)
-        $CALLBIGGAP && sudo docker container start portainer &1>/dev/null && echo "Portainer should now be available on localhost:9000"
-        
+    1)  
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container start portainer  
+        echo "Portainer should now be available on localhost:9000 - Don't forget to create an admin account on first use!"
+        echo
+        echo
+        echo
+        echo
+        portaineroptions
         ;;
     2)
-        $CALLBIGGAP && sudo docker container stop portainer &1>/dev/null && echo "Portainer has been shut down"
-        
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container stop portainer 
+        echo "Portainer has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
+        portaineroptions
         ;;
     3)
         dockercontainerssubmenu
@@ -69,11 +85,33 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start mail-header-analyzer &1>/dev/null && $CALLBIGGAP && echo "Mail Header Analyzer should now be available on localhost:8080"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container start mail-header-analyzer
+        echo "Mail Header Analyzer should now be available on localhost:8080"
+        echo
+        echo
+        echo
+        echo
+        echo
         mhaoptions
         ;;
     2)
-        sudo docker container stop mail-header-analyzer &1>/dev/null && $CALLBIGGAP && echo "Mail Header Analyzer has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container stop mail-header-analyzer 
+        echo "Mail Header Analyzer has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
         mhaoptions
         ;;
     3)
@@ -103,11 +141,33 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start autosploit &1>/dev/null && $CALLBIGGAP && echo "AutoSploit should now be available on http://localhost:2000 and https://localhost:2001"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container start autosploit
+        echo "AutoSploit should now be available on http://localhost:2000 and https://localhost:2001"
+        echo
+        echo
+        echo
+        echo
+        echo
         autosploitoptions
         ;;
     2)
-        sudo docker container stop autosploit &1>/dev/null && $CALLBIGGAP && echo "AutoSploit has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container stop autosploit
+        echo "AutoSploit has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
         autosploitoptions
         ;;
     3)
@@ -165,13 +225,22 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)  
-        $CALLBIGGAP 
-        echo ""
-            echo ""
+        
+        echo
+        echo
+        echo
+        echo
+        echo
             echo "To analyse file, place it in ~/apps/forensics/stego-toolkit/data"
             echo ""
             echo "Starting stego-toolkit"
             echo "Type exit to quit"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sleep 5
             sudo docker run -it --rm -v ~/apps/forensics/stego-toolkit/data:/data dominicbreuker/stego-toolkit /bin/bash
         stegotoolkitoptions
         ;;
@@ -202,11 +271,33 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start juiceshop &1>/dev/null && $CALLBIGGAP && echo "Juiceshop should now be available on localhost:3000"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container start juiceshop 
+        echo "Juiceshop should now be available on localhost:3000"
+        echo
+        echo
+        echo
+        echo
+        echo
         juiceshopoptions
         ;;
     2)
-        sudo docker container stop juiceshop &1>/dev/null && $CALLBIGGAP && echo "Juiceshop has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container stop juiceshop
+        echo "Juiceshop has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
         juiceshopoptions
         ;;
     3)
@@ -237,11 +328,33 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start spiderfoot &1>/dev/null && $CALLBIGGAP && echo "spiderfoot should now be available on localhost:5009"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container start spiderfoot 
+        echo "spiderfoot should now be available on localhost:5009"
+        echo
+        echo
+        echo
+        echo
+        echo
         spiderfootoptions
         ;;
     2)
-        sudo docker container stop spiderfoot &1>/dev/null && $CALLBIGGAP && echo "Spiderfoot has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
+        sudo docker container stop spiderfoot &1>/dev/null
+        echo "Spiderfoot has been shut down"
+        echo
+        echo
+        echo
+        echo
+        echo
         spiderfootoptions
         ;;
     3)
