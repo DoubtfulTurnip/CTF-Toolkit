@@ -382,7 +382,7 @@ $(greenprint '4)') NoSQLMap
 $(greenprint '5)') Stego Toolkit
 $(greenprint '6)') JuiceShop
 $(greenprint '7)') Spiderfoot
-$(magentaprint '2)') Go Back to Main Menu
+$(magentaprint '8)') Go Back to Main Menu
 $(redprint '0)') Exit
 Choose an option:  "
     read -r ans
@@ -395,27 +395,30 @@ Choose an option:  "
         
         mhaoptions
         ;;
-    2)
+    3)
         
         autosploitoptions
         ;;
-    2)
+    4)
         
         nosqlmapoptions
         ;;
-    2)
+    5)
         
         stegotoolkitoptions
         ;;
-    2)
+    6)
         
         juiceshopoptions
         ;;
-    2)
+    7)
         
         spiderfootoptions
         ;;
-
+    8)
+        
+        mainmenu
+        ;;
     0)
         fn_bye
         ;;
