@@ -6,7 +6,8 @@ GREEN="${ESC}[32m" YELLOW="${ESC}[33m" BLUE="${ESC}[34m" MAGENTA="${ESC}[35m"
 CYAN="${ESC}[36m" WHITE="${ESC}[37m" DEFAULT="${ESC}[39m"
 
 ### Spacing ##
-BIGGAP=echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+BIGGAP="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+CALLBIGGAP=echo -e $BIGGAP
 
 
 ### Color Functions ##
@@ -35,11 +36,11 @@ Choose an option:  "
     case $ans in
     1)
         echo "Start Portainer"
-	    sudo docker container start portainer &1>/dev/null && $BIGGAP && echo "Portainer should now be available on localhost:9000"
+	    sudo docker container start portainer &1>/dev/null && $CALLBIGGAP && echo "Portainer should now be available on localhost:9000"
         portaineroptions
         ;;
     2)
-        sudo docker container stop portainer &1>/dev/null && $BIGGAP && echo "Portainer has been shut down"
+        sudo docker container stop portainer &1>/dev/null && $CALLBIGGAP && echo "Portainer has been shut down"
         portaineroptions
         ;;
     3)
@@ -69,11 +70,11 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start mail-header-analyzer &1>/dev/null && $BIGGAP && echo "Mail Header Analyzer should now be available on localhost:8080"
+        sudo docker container start mail-header-analyzer &1>/dev/null && $CALLBIGGAP && echo "Mail Header Analyzer should now be available on localhost:8080"
         mhaoptions
         ;;
     2)
-        sudo docker container stop mail-header-analyzer &1>/dev/null && $BIGGAP && echo "Mail Header Analyzer has been shut down"
+        sudo docker container stop mail-header-analyzer &1>/dev/null && $CALLBIGGAP && echo "Mail Header Analyzer has been shut down"
         mhaoptions
         ;;
     3)
@@ -103,11 +104,11 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start autosploit &1>/dev/null && $BIGGAP && echo "AutoSploit should now be available on http://localhost:2000 and https://localhost:2001"
+        sudo docker container start autosploit &1>/dev/null && $CALLBIGGAP && echo "AutoSploit should now be available on http://localhost:2000 and https://localhost:2001"
         autosploitoptions
         ;;
     2)
-        sudo docker container stop autosploit &1>/dev/null && $BIGGAP && echo "AutoSploit has been shut down"
+        sudo docker container stop autosploit &1>/dev/null && $CALLBIGGAP && echo "AutoSploit has been shut down"
         autosploitoptions
         ;;
     3)
@@ -165,7 +166,7 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)  
-        $BIGGAP 
+        $CALLBIGGAP 
         echo ""
             echo ""
             echo "To analyse file, place it in ~/apps/forensics/stego-toolkit/data"
@@ -202,11 +203,11 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start juiceshop &1>/dev/null && $BIGGAP && echo "Juiceshop should now be available on localhost:3000"
+        sudo docker container start juiceshop &1>/dev/null && $CALLBIGGAP && echo "Juiceshop should now be available on localhost:3000"
         juiceshopoptions
         ;;
     2)
-        sudo docker container stop juiceshop &1>/dev/null && $BIGGAP && echo "Juiceshop has been shut down"
+        sudo docker container stop juiceshop &1>/dev/null && $CALLBIGGAP && echo "Juiceshop has been shut down"
         juiceshopoptions
         ;;
     3)
@@ -237,11 +238,11 @@ Choose an option:  "
     read -r ans
     case $ans in
     1)
-        sudo docker container start spiderfoot &1>/dev/null && $BIGGAP && echo "spiderfoot should now be available on localhost:5009"
+        sudo docker container start spiderfoot &1>/dev/null && $CALLBIGGAP && echo "spiderfoot should now be available on localhost:5009"
         spiderfootoptions
         ;;
     2)
-        sudo docker container stop spiderfoot &1>/dev/null && $BIGGAP && echo "Spiderfoot has been shut down"
+        sudo docker container stop spiderfoot &1>/dev/null && $CALLBIGGAP && echo "Spiderfoot has been shut down"
         spiderfootoptions
         ;;
     3)

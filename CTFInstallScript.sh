@@ -664,10 +664,10 @@ echo -e "${BLUE}Creating NoSQLMap${NC}" | tee -a $dockerinstall
 git clone https://github.com/codingo/NoSQLMap $exploit/NoSQLMap/ 1>/dev/null 2>> $dockerinstall
 cd $exploit/NoSQLMap/ 
 sudo docker-compose build 1>/dev/null 2>> $dockerinstall
-echo -e "${RED}To start NoSQLMap use the ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
+echo -e "${RED}To start NoSQLMap use the${NC} ${BOLD}apphelp${NORM} command${NC}" | tee -a $dockerinstall
 echo -e ""
 
-echo -e "${BLUE}Creating Juicshop${NC}" | tee -a $dockerinstall
+echo -e "${BLUE}Creating Juiceshop${NC}" | tee -a $dockerinstall
 sudo docker create --name juiceshop -p 3000:3000 bkimminich/juice-shop 1>/dev/null 2>> $dockerinstall
 echo -e "${RED}To start Juiceshop use the${NC} ${BOLD}apphelp${NORM} ${RED}command${NC}" | tee -a $dockerinstall
 echo -e ""
@@ -678,6 +678,9 @@ echo -e ""
 echo -e ""
 echo -e ""
 echo -e "${RED}Installation Complete${NC}" | tee -a $install
+echo -e ""
+echo -e ""
+echo -e ""
 echo -e "${RED}${BOLD}Restart your terminal for changes to take effect${NORM}${NC}"
 echo -e "${RED}Once you have done this run${NC} ${BOLD}apphelp${NORM} ${RED}to start using the newly installed tools${NC}"
 echo -e ""
